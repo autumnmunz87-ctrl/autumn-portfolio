@@ -9,7 +9,7 @@ export default function SocialButtons() {
     <div className="flex items-center gap-3">
       <Link
         href={`mailto:${email}`}
-        className="text-body-regular text-foreground-muted underline transition-colors hover:text-foreground"
+        className="text-body-regular text-[#808080] underline transition-colors hover:text-foreground"
       >
         Email
       </Link>

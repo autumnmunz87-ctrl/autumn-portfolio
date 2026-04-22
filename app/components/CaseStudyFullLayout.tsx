@@ -37,18 +37,50 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
   const data = getCaseStudyModalData(slug);
   const study = getCaseStudyBySlug(slug);
   const otherProjects = caseStudies.filter((s) => s.slug !== slug);
+  const isFlyingXCoffee = slug === "flying-x-coffee";
+  const isMindScribe = slug === "mind-scribe";
+  const isGameLibrary = slug === "game-library";
 
   if (!data || !study) return null;
 
   return (
     <div className="ms-modal-layout flex flex-col min-[809px]:flex-row min-[809px]:items-stretch min-[809px]:gap-12">
       {/* Left column: sticky sidebar – project-info, project-tags, section-navigation */}
-      <aside className="ms-modal-sidebar flex flex-col shrink-0 min-[809px]:sticky min-[809px]:top-[100px] min-[809px]:w-64">
-        <div className="ms-modal-container case-study-left flex flex-col">
+      <aside
+        className="ms-modal-sidebar flex flex-col shrink-0 min-[809px]:sticky min-[809px]:top-[100px] min-[809px]:w-64"
+        style={isFlyingXCoffee ? { height: "939px" } : undefined}
+      >
+        <div
+          className="ms-modal-container case-study-left flex flex-col"
+          style={
+            isMindScribe
+              ? { height: "933px" }
+              : isGameLibrary
+              ? { height: "812px" }
+              : isFlyingXCoffee
+                ? { height: "932px" }
+                : undefined
+          }
+        >
           {/* GROUP 1: Project title and subtitle */}
           <div className="project-info">
             <h1 className="ms-modal-heading font-bold">{study.title}</h1>
-            {study.subtitle && <p className="project-subtitle ms-modal-body text-sm">{study.subtitle}</p>}
+            {study.subtitle && (
+              <p
+                className="project-subtitle ms-modal-body text-sm"
+                style={
+                  isMindScribe
+                    ? { color: "rgba(128, 128, 128, 1)", fontSize: "16px" }
+                    : isFlyingXCoffee
+                      ? { color: "rgba(128, 128, 128, 1)", fontSize: "16px" }
+                      : isGameLibrary
+                        ? { color: "rgba(128, 128, 128, 1)", fontSize: "16px" }
+                      : undefined
+                }
+              >
+                {study.subtitle}
+              </p>
+            )}
           </div>
           {/* GROUP 2: Project tags */}
           {study.tags && study.tags.length > 0 && (
@@ -65,8 +97,31 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
             </div>
           )}
           {/* GROUP 3: Section navigation */}
-          <div className="section-navigation">
-            <nav aria-label="Section navigation" className="flex flex-col gap-2">
+          <div
+            className="section-navigation"
+            style={
+              isMindScribe
+                ? { height: "645px" }
+                : isGameLibrary
+                  ? { height: "631px" }
+                : isFlyingXCoffee
+                  ? { marginTop: "40px", height: "700px" }
+                  : undefined
+            }
+          >
+            <nav
+              aria-label="Section navigation"
+              className="flex flex-col gap-2"
+              style={
+                isMindScribe
+                  ? { marginTop: "517px", marginBottom: "517px" }
+                  : isGameLibrary
+                    ? { marginTop: "539px", marginBottom: "539px" }
+                  : isFlyingXCoffee
+                    ? { marginTop: "576px", marginBottom: "48px" }
+                    : undefined
+              }
+            >
               {SECTION_NAV.map((item) => (
                 <button
                   key={item.id}

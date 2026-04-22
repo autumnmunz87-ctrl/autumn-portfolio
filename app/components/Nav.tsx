@@ -34,12 +34,12 @@ export default function Nav() {
 
         {/* Desktop: horizontal links | Mobile: hamburger */}
         <div className="flex items-center gap-8">
-          <div className="hidden min-[809px]:flex items-center gap-8">
+          <div className="hidden min-[809px]:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-body-small text-foreground-muted transition-colors duration-200 ease-out hover:text-accent-orange min-[809px]:text-body-regular"
+                className="text-body-regular text-foreground-muted transition-colors duration-200 ease-out hover:text-accent-orange"
               >
                 {link.label}
               </Link>

@@ -94,7 +94,7 @@ export default function CaseStudyModal({ study, onClose }: CaseStudyModalProps) 
           </button>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-y-auto scroll-smooth pt-16">
+        <div className="min-h-0 flex-1 overflow-y-auto scroll-smooth pt-20">
           <CaseStudyFullLayout slug={study.slug} />
         </div>
       </div>

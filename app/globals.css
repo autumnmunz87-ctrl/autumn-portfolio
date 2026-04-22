@@ -96,8 +96,8 @@ body {
 
 /* Hero section - spacing below navbar */
 .hero {
-  margin-top: 128px;
-  margin-bottom: 48px;
+  margin-top: 120px;
+  margin-bottom: 80px;
 }
 
 .hero h1 {
@@ -106,6 +106,8 @@ body {
 
 .hero-subheader {
   margin-top: 0;
+  font-size: 18px;
+  color: rgba(128, 128, 128, 0.8);
 }
 
 /* Selected Work section */
@@ -202,7 +204,7 @@ body {
 }
 
 .section-navigation {
-  margin-top: 72px;
+  margin-top: 40px;
 }
 
 /* Two-column layout: sticky left sidebar + scrollable right content */
@@ -542,7 +544,7 @@ body {
   line-height: 1.2;
   color: var(--primary-black);
   font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
 }
 @media (min-width: 1201px) {
   .section-title {
@@ -553,27 +555,17 @@ body {
 .card-title {
   font-weight: 400;
   line-height: 1.5;
-  color: var(--primary-black);
+  color: rgba(0, 0, 0, 1);
   font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 14px;
-}
-@media (min-width: 809px) {
-  .card-title {
-    font-size: 16px;
-  }
+  font-size: 18px;
 }
 
 .card-description {
   font-weight: 400;
   line-height: 1.6;
-  color: var(--primary-black);
+  color: rgba(128, 128, 128, 1);
   font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 14px;
-}
-@media (min-width: 809px) {
-.card-description {
   font-size: 16px;
-  }
 }
 
 /* About page: bio paragraph - Body Small on Phone/Tablet, Body Regular on Desktop+ */
@@ -1116,6 +1108,6 @@ body {
 }
 @media (min-width: 809px) {
   .footer-title {
-    font-size: 36px;
+    font-size: 32px;
   }
 }

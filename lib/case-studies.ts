@@ -64,7 +64,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ["UI/UX", "Prototyping", "Research"],
     role: "UX Designer",
     team: "Solo",
-    duration: "3 weeks",
+    duration: "March 2024 - June 2024",
     tools: "Figma, Miro",
     insights: [
       { heading: "Context", body: "A journaling platform designed to inspire daily reflection and emotional well-being." },
@@ -107,7 +107,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ["UI/UX", "Web Design"],
     role: "UX Designer",
     team: "Solo",
-    duration: "2 weeks",
+    duration: "July 2024 - October 2024",
     tools: "Figma",
     insights: [
       { heading: "Context", body: "A digital presence to reflect the brand and help customers discover menus and events." },
@@ -144,7 +144,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ["UI/UX", "Speculative", "Visual Design"],
     role: "UX Designer",
     team: "Solo",
-    duration: "3 weeks",
+    duration: "September 2024 - November 2024",
     tools: "Figma, Adobe CC",
     insights: [
       { heading: "Context", body: "A discovery site for retro and indie games with early 2000s web aesthetics." },
