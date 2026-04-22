@@ -5,6 +5,7 @@ export type CaseStudy = {
   description: string;
   image: string;
   href: string;
+  comingSoon?: boolean;
   tags?: string[];
   /** Hero intro paragraph (below title) */
   intro?: string;
@@ -170,6 +171,18 @@ export const caseStudies: CaseStudy[] = [
     process:
       "Mood boarding → style tiles → component library → responsive breakpoints → accessibility audit.",
     impact: "Positive feedback on both aesthetic appeal and ease of use.",
+  },
+  {
+    slug: "fintech",
+    title: "Fintech",
+    subtitle: "Coming soon",
+    // TODO: Replace with final Fintech case study description when details are ready.
+    description:
+      "A fintech product that reimagines personal finance through intuitive design.",
+    image: "/images%20fintech/fintech%20hero%20image.png",
+    href: "/work/fintech",
+    // TODO: Set to false and complete case study fields when Fintech case study is complete.
+    comingSoon: true,
   },
 ];
 
