@@ -39,9 +39,14 @@ export type CaseStudy = {
 };
 
 const FLYING_X_COFFEE_IMAGE_DIR = "images flying x coffee";
+const GAME_LIBRARY_IMAGE_DIR = "images game library";
 
 function flyingXCoffeeImageFile(n: number): string {
   return "/" + [FLYING_X_COFFEE_IMAGE_DIR, `flying x coffee image ${n}.png`].map(encodeURIComponent).join("/");
+}
+
+function GameLibraryImageFile(n: number): string {
+  return "/" + [GAME_LIBRARY_IMAGE_DIR, `game library image ${n}.png`].map(encodeURIComponent).join("/");
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -112,9 +117,9 @@ export const caseStudies: CaseStudy[] = [
       uiImage: "/placeholder-flyingx.svg",
       chartImage: "/placeholder-flyingx.svg",
     },
-    contextImage: flyingXCoffeeImageFile(2),
-    processImages: [3, 4, 5].map(flyingXCoffeeImageFile),
-    designArtifacts: [6, 7, 8].map(flyingXCoffeeImageFile),
+    contextImage: flyingXCoffeeImageFile(7),
+    processImages: [2, 3, 4].map(flyingXCoffeeImageFile),
+    designArtifacts: [5, 6, 8].map(flyingXCoffeeImageFile),
     context:
       "Flying X Coffee wanted a digital presence that reflected their brand and made it easy for customers to discover menus and events.",
     challenge:
@@ -149,10 +154,10 @@ export const caseStudies: CaseStudy[] = [
       uiImage: "/placeholder-gamelibrary.svg",
       chartImage: "/placeholder-gamelibrary.svg",
     },
-    designArtifacts: [
-      "/placeholder-gamelibrary.svg",
-      "/placeholder-gamelibrary.svg",
-    ],
+    contextImage: GameLibraryImageFile(2),
+    processImages: [5, 6, 7, 8].map(GameLibraryImageFile),
+    designArtifacts: [9].map(GameLibraryImageFile),
+    impactImage: GameLibraryImageFile(10),
     context:
       "Game Library is a discovery site for retro and indie games, aiming to evoke early 2000s web aesthetics while staying usable.",
     challenge:
