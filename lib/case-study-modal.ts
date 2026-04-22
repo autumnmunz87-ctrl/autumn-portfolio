@@ -13,7 +13,7 @@ export type CaseStudyModalData = {
   metaGrid: { role: string; skills: string; team: string; timeline: string };
   featureCards: { heading: string; body: string }[];
   /** Research / Context section */
-  research: { heading: string; body: string; image?: string };
+  research: { heading: string; body: string; image?: string; images?: string[] };
   /** Optional user feedback block */
   userFeedback?: { heading: string; body: string };
   /** Objective / Challenge section */
@@ -76,6 +76,7 @@ function buildFromCaseStudy(study: CaseStudy): CaseStudyModalData {
       heading: study.contextHeading ?? "Context",
       body: study.context ?? "",
       image: study.contextImage,
+      images: study.contextImages,
     },
     process: {
       heading: study.processHeading ?? "Process",
@@ -101,6 +102,7 @@ function buildFromCaseStudy(study: CaseStudy): CaseStudyModalData {
       heading: "Reflections",
       body:
         "This project provided valuable experience in UX design, from research through to final implementation. The process reinforced the importance of user-centered design and iterative refinement.",
+      userReflectionsImage: study.impactImage,
     },
     projectedImpact: {
       heading: study.impactHeading ?? "Projected Impact",

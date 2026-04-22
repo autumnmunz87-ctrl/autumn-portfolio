@@ -22,6 +22,7 @@ export type CaseStudy = {
   context?: string;
   contextHeading?: string;
   contextImage?: string;
+  contextImages?: string[];
   challenge?: string;
   challengeHeading?: string;
   challengeImage?: string;
@@ -155,8 +156,10 @@ export const caseStudies: CaseStudy[] = [
       chartImage: "/placeholder-gamelibrary.svg",
     },
     contextImage: GameLibraryImageFile(2),
+    contextImages: [3, 4].map(GameLibraryImageFile),
     processImages: [5, 6, 7, 8].map(GameLibraryImageFile),
-    designArtifacts: [9].map(GameLibraryImageFile),
+    designArtifacts: [],
+    solutionImage: GameLibraryImageFile(9),
     impactImage: GameLibraryImageFile(10),
     context:
       "Game Library is a discovery site for retro and indie games, aiming to evoke early 2000s web aesthetics while staying usable.",

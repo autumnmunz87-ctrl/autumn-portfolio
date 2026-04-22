@@ -157,6 +157,9 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
               {data.research.image && (
                 <SectionImage src={data.research.image} alt="Research" />
               )}
+              {data.research.images?.map((src, i) => (
+                <SectionImage key={i} src={src} alt={`Research ${i + 2}`} />
+              ))}
             </section>
           )}
 
