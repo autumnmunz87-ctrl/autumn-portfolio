@@ -13,7 +13,9 @@ function fileStemFromPath(path: string): string {
 
 function trailingImageIndex(path: string): number | null {
   const stem = fileStemFromPath(path);
-  const imageMatches = [...stem.matchAll(/\bimage[ _-]?(\d+)\b/gi)];
+  // `_image_1` in `coffee_image_1-uuid` has no `\b` before `image` in JS (underscore is \w).
+  // Avoid falling back to trailing UUID digits — prefer explicit `image` + index.
+  const imageMatches = [...stem.matchAll(/(?:^|[^a-z0-9])image[ _-]?(\d+)/gi)];
   if (imageMatches.length > 0) {
     return parseInt(imageMatches[imageMatches.length - 1][1], 10);
   }
