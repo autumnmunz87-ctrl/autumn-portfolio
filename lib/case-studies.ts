@@ -36,6 +36,12 @@ export type CaseStudy = {
   impactImage?: string;
 };
 
+const FLYING_X_COFFEE_IMAGE_DIR = "images flying x coffee";
+
+function flyingXCoffeeImageFile(n: number): string {
+  return "/" + [FLYING_X_COFFEE_IMAGE_DIR, `flying x coffee image ${n}.png`].map(encodeURIComponent).join("/");
+}
+
 export const caseStudies: CaseStudy[] = [
   {
     slug: "mind-scribe",
@@ -104,10 +110,7 @@ export const caseStudies: CaseStudy[] = [
       uiImage: "/placeholder-flyingx.svg",
       chartImage: "/placeholder-flyingx.svg",
     },
-    designArtifacts: [
-      "/placeholder-flyingx.svg",
-      "/placeholder-flyingx.svg",
-    ],
+    designArtifacts: [8, 7, 6, 5, 4, 3, 2, 1].map(flyingXCoffeeImageFile),
     context:
       "Flying X Coffee wanted a digital presence that reflected their brand and made it easy for customers to discover menus and events.",
     challenge:
