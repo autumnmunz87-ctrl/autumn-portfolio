@@ -31,6 +31,8 @@ export type CaseStudy = {
   process?: string;
   processHeading?: string;
   processImage?: string;
+  /** Shown in order after the process body (e.g. Flying X Coffee) */
+  processImages?: string[];
   impact?: string;
   impactHeading?: string;
   impactImage?: string;
@@ -110,7 +112,9 @@ export const caseStudies: CaseStudy[] = [
       uiImage: "/placeholder-flyingx.svg",
       chartImage: "/placeholder-flyingx.svg",
     },
-    designArtifacts: [2, 3, 4, 5, 6, 7, 8].map(flyingXCoffeeImageFile),
+    contextImage: flyingXCoffeeImageFile(2),
+    processImages: [3, 4, 5].map(flyingXCoffeeImageFile),
+    designArtifacts: [6, 7, 8].map(flyingXCoffeeImageFile),
     context:
       "Flying X Coffee wanted a digital presence that reflected their brand and made it easy for customers to discover menus and events.",
     challenge:

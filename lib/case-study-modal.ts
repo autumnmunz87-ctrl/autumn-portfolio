@@ -32,6 +32,8 @@ export type CaseStudyModalData = {
     designProcessImage?: string;
     /** Single process image for simpler studies */
     image?: string;
+    /** After process body, before other process images (e.g. Flying X) */
+    postBodyImages?: string[];
   };
   /** Final Designs / Solution section */
   finalDesigns: {
@@ -79,6 +81,7 @@ function buildFromCaseStudy(study: CaseStudy): CaseStudyModalData {
       heading: study.processHeading ?? "Process",
       body: study.process ?? "",
       image: study.processImage,
+      postBodyImages: study.processImages,
     },
     finalDesigns: {
       heading: study.solutionHeading ?? "Final Designs",
