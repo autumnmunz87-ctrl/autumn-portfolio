@@ -96,7 +96,7 @@ export const caseStudies: CaseStudy[] = [
       "Coffee shop website that enhances customer engagement and maximizes usability of key features.",
     intro:
       "A coffee shop website designed to reflect the brand and make it easy for customers to discover menus, order, and sign up for events.",
-    image: "/flying-x-coffee-hero.png",
+    image: "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%201.png",
     href: "/work/flying-x-coffee",
     tags: ["UI/UX", "Web Design"],
     role: "UX Designer",
