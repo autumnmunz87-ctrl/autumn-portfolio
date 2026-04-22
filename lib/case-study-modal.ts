@@ -4,6 +4,7 @@
  */
 import { mindScribeModalData } from "./mind-scribe-modal";
 import { getCaseStudyBySlug, type CaseStudy } from "./case-studies";
+import { sortPathsByImageFilenameNumber } from "./sort-case-study-images";
 
 export type CaseStudyModalData = {
   coverImage: string;
@@ -50,6 +51,10 @@ function buildFromCaseStudy(study: CaseStudy): CaseStudyModalData {
   const skills = study.tools ?? "-";
   const team = study.team ?? "-";
   const timeline = study.duration ?? "-";
+  const sortedArtifacts =
+    study.designArtifacts && study.designArtifacts.length > 0
+      ? sortPathsByImageFilenameNumber([...study.designArtifacts])
+      : undefined;
 
   return {
     coverImage: study.image,
@@ -78,8 +83,16 @@ function buildFromCaseStudy(study: CaseStudy): CaseStudyModalData {
     finalDesigns: {
       heading: study.solutionHeading ?? "Final Designs",
       body: study.solution ?? "",
-      image1: study.solutionImage ?? study.designArtifacts?.[0] ?? study.dataBlock?.uiImage ?? study.image,
-      additionalImages: study.designArtifacts?.slice(1) ?? (study.dataBlock ? [study.dataBlock.chartImage] : []),
+      image1:
+        study.solutionImage ??
+        sortedArtifacts?.[0] ??
+        study.designArtifacts?.[0] ??
+        study.dataBlock?.uiImage ??
+        study.image,
+      additionalImages:
+        sortedArtifacts && sortedArtifacts.length > 1
+          ? sortedArtifacts.slice(1)
+          : study.designArtifacts?.slice(1) ?? (study.dataBlock ? [study.dataBlock.chartImage] : []),
     },
     reflections: {
       heading: "Reflections",

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CaseStudy } from "@/lib/case-studies";
 import { caseStudies } from "@/lib/case-studies";
+import { sortPathsByImageFilenameNumber } from "@/lib/sort-case-study-images";
 
 const SECTION_SUBTITLE_FALLBACK =
   "Designing new features to integrate innovation and improve user engagement and accessibility.";
@@ -96,7 +97,7 @@ export default function CaseStudyLayout({ study, scrollable = false, titleId }: 
       {/* Design Artifacts Grid */}
       {study.designArtifacts && study.designArtifacts.length > 0 && (
         <section className="case-study-artifacts-grid">
-          {study.designArtifacts.map((src, i) => (
+          {sortPathsByImageFilenameNumber([...study.designArtifacts]).map((src, i) => (
             <div key={i} className="case-study-artifacts-grid__item">
               <Image
                 src={src}
