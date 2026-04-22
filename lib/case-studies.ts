@@ -110,7 +110,7 @@ export const caseStudies: CaseStudy[] = [
       uiImage: "/placeholder-flyingx.svg",
       chartImage: "/placeholder-flyingx.svg",
     },
-    designArtifacts: [8, 7, 6, 5, 4, 3, 2, 1].map(flyingXCoffeeImageFile),
+    designArtifacts: [2, 3, 4, 5, 6, 7, 8].map(flyingXCoffeeImageFile),
     context:
       "Flying X Coffee wanted a digital presence that reflected their brand and made it easy for customers to discover menus and events.",
     challenge:
