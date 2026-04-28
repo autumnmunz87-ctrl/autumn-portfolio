@@ -88,8 +88,11 @@ export const caseStudies: CaseStudy[] = [
       uiImage: "/placeholder-gamelibrary.svg",
       chartImage: "/placeholder-gamelibrary.svg",
     },
-    contextImage: GameLibraryImageFile(2),
-    contextImages: [3, 4].map(GameLibraryImageFile),
+    contextImage: "/images%20game%20library/game%20library%20image%202%20replacement.png",
+    contextImages: [
+      "/images%20game%20library/game%20library%20image%203%20replacement.png",
+      "/images%20game%20library/game%20library%20image%204%20replacement.png",
+    ],
     processImages: [5, 6, 7, 8].map(GameLibraryImageFile),
     designArtifacts: [],
     solutionImage: GameLibraryImageFile(9),
