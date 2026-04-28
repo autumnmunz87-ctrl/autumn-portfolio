@@ -136,7 +136,10 @@ export const caseStudies: CaseStudy[] = [
       uiImage: "/placeholder-flyingx.svg",
       chartImage: "/placeholder-flyingx.svg",
     },
-    contextImages: [6, 7].map(flyingXCoffeeImageFile),
+    contextImages: [
+      "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%206%20replacement.png",
+      "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%207%20replacement.png",
+    ],
     processImages: [3, 4, 5].map(flyingXCoffeeImageFile),
     designArtifacts: [2, 8].map(flyingXCoffeeImageFile),
     context:
