@@ -53,84 +53,16 @@ function GameLibraryImageFile(n: number): string {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "mind-scribe",
-    title: "Mind Scribe",
-    subtitle: "Journaling & wellness platform",
+    slug: "fintech",
+    title: "Fintech",
+    subtitle: "Coming soon",
+    // TODO: Replace with final Fintech case study description when details are ready.
     description:
-      "Journaling and wellness platform designed to inspire users and solve frequently experienced usability issues.",
-    intro:
-      "Journaling and wellness platform designed to inspire daily reflection and emotional well-being. This case study explores the design process from research to high-fidelity prototypes.",
-    image: "/mind-scribe-hero.png",
-    href: "/work/mind-scribe",
-    tags: ["UI/UX", "Prototyping", "Research"],
-    role: "UX Designer",
-    team: "Solo",
-    duration: "March 2024 - June 2024",
-    tools: "Figma, Miro",
-    insights: [
-      { heading: "Context", body: "A journaling platform designed to inspire daily reflection and emotional well-being." },
-      { heading: "Challenge", body: "Users faced cluttered interfaces and unclear flows that discouraged consistent use." },
-      { heading: "Solution", body: "Redesigned flows with clearer hierarchy, reduced cognitive load, and intuitive prompts." },
-    ],
-    dataBlock: {
-      uiImage: "/placeholder-mindscribe.svg",
-      chartImage: "/placeholder-mindscribe.svg",
-    },
-    designArtifacts: [
-      "/placeholder-mindscribe.svg",
-      "/placeholder-mindscribe.svg",
-    ],
-    context:
-      "Mind Scribe is a journaling and wellness platform designed to inspire daily reflection and emotional well-being.",
-    contextHeading: "Understanding the problem space",
-    challenge:
-      "Users experienced usability friction with existing journaling apps—cluttered interfaces and unclear flows discouraged consistent use.",
-    challengeHeading: "Reducing friction for daily journaling",
-    solution:
-      "Redesigned core flows with clearer hierarchy, reduced cognitive load, and intuitive prompts that encourage reflection without overwhelm.",
-    solutionHeading: "Clearer hierarchy and intuitive prompts",
-    process:
-      "Research → personas → wireframes → usability testing → high-fidelity design → iteration based on feedback.",
-    processHeading: "From research to high-fidelity design",
-    impact: "Improved task completion rates and user retention in follow-up studies.",
-    impactHeading: "Measurable improvements in engagement",
-  },
-  {
-    slug: "flying-x-coffee",
-    title: "Flying X Coffee",
-    subtitle: "Coffee shop website",
-    description:
-      "Coffee shop website that enhances customer engagement and maximizes usability of key features.",
-    intro:
-      "A coffee shop website designed to reflect the brand and make it easy for customers to discover menus, order, and sign up for events.",
-    image: "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%201.png",
-    href: "/work/flying-x-coffee",
-    tags: ["UI/UX", "Web Design"],
-    role: "UX Designer",
-    team: "Solo",
-    duration: "July 2024 - October 2024",
-    tools: "Figma",
-    insights: [
-      { heading: "Context", body: "A digital presence to reflect the brand and help customers discover menus and events." },
-      { heading: "Challenge", body: "The previous site was hard to navigate and didn't surface key actions like ordering." },
-      { heading: "Solution", body: "Clean layout with prominent CTAs and simplified navigation structure." },
-    ],
-    dataBlock: {
-      uiImage: "/placeholder-flyingx.svg",
-      chartImage: "/placeholder-flyingx.svg",
-    },
-    contextImage: flyingXCoffeeImageFile(7),
-    processImages: [2, 3, 4].map(flyingXCoffeeImageFile),
-    designArtifacts: [5, 6, 8].map(flyingXCoffeeImageFile),
-    context:
-      "Flying X Coffee wanted a digital presence that reflected their brand and made it easy for customers to discover menus and events.",
-    challenge:
-      "The previous site was hard to navigate and did not clearly surface key actions like ordering and event sign-up.",
-    solution:
-      "Created a clean, focused layout with prominent CTAs and a simplified navigation structure.",
-    process:
-      "Stakeholder interviews → competitive audit → information architecture → visual design → user testing.",
-    impact: "Increased engagement with menu pages and event registration.",
+      "A fintech product that reimagines personal finance through intuitive design.",
+    image: "/images%20fintech/fintech%20hero%20image.png",
+    href: "/work/fintech",
+    // TODO: Set to false and complete case study fields when Fintech case study is complete.
+    comingSoon: true,
   },
   {
     slug: "game-library",
@@ -173,16 +105,84 @@ export const caseStudies: CaseStudy[] = [
     impact: "Positive feedback on both aesthetic appeal and ease of use.",
   },
   {
-    slug: "fintech",
-    title: "Fintech",
-    subtitle: "Coming soon",
-    // TODO: Replace with final Fintech case study description when details are ready.
+    slug: "flying-x-coffee",
+    title: "Flying X Coffee",
+    subtitle: "Coffee shop website",
     description:
-      "A fintech product that reimagines personal finance through intuitive design.",
-    image: "/images%20fintech/fintech%20hero%20image.png",
-    href: "/work/fintech",
-    // TODO: Set to false and complete case study fields when Fintech case study is complete.
-    comingSoon: true,
+      "Coffee shop website that enhances customer engagement and maximizes usability of key features.",
+    intro:
+      "A coffee shop website designed to reflect the brand and make it easy for customers to discover menus, order, and sign up for events.",
+    image: "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%201.png",
+    href: "/work/flying-x-coffee",
+    tags: ["UI/UX", "Web Design"],
+    role: "UX Designer",
+    team: "Solo",
+    duration: "July 2024 - October 2024",
+    tools: "Figma",
+    insights: [
+      { heading: "Context", body: "A digital presence to reflect the brand and help customers discover menus and events." },
+      { heading: "Challenge", body: "The previous site was hard to navigate and didn't surface key actions like ordering." },
+      { heading: "Solution", body: "Clean layout with prominent CTAs and simplified navigation structure." },
+    ],
+    dataBlock: {
+      uiImage: "/placeholder-flyingx.svg",
+      chartImage: "/placeholder-flyingx.svg",
+    },
+    contextImage: flyingXCoffeeImageFile(6),
+    processImages: [7, 3, 4, 5].map(flyingXCoffeeImageFile),
+    designArtifacts: [2, 8].map(flyingXCoffeeImageFile),
+    context:
+      "Flying X Coffee wanted a digital presence that reflected their brand and made it easy for customers to discover menus and events.",
+    challenge:
+      "The previous site was hard to navigate and did not clearly surface key actions like ordering and event sign-up.",
+    solution:
+      "Created a clean, focused layout with prominent CTAs and a simplified navigation structure.",
+    process:
+      "Stakeholder interviews → competitive audit → information architecture → visual design → user testing.",
+    impact: "Increased engagement with menu pages and event registration.",
+  },
+  {
+    slug: "mind-scribe",
+    title: "Mind Scribe",
+    subtitle: "Journaling & wellness platform",
+    description:
+      "Journaling and wellness platform designed to inspire users and solve frequently experienced usability issues.",
+    intro:
+      "Journaling and wellness platform designed to inspire daily reflection and emotional well-being. This case study explores the design process from research to high-fidelity prototypes.",
+    image: "/mind-scribe-hero.png",
+    href: "/work/mind-scribe",
+    tags: ["UI/UX", "Prototyping", "Research"],
+    role: "UX Designer",
+    team: "Solo",
+    duration: "March 2024 - June 2024",
+    tools: "Figma, Miro",
+    insights: [
+      { heading: "Context", body: "A journaling platform designed to inspire daily reflection and emotional well-being." },
+      { heading: "Challenge", body: "Users faced cluttered interfaces and unclear flows that discouraged consistent use." },
+      { heading: "Solution", body: "Redesigned flows with clearer hierarchy, reduced cognitive load, and intuitive prompts." },
+    ],
+    dataBlock: {
+      uiImage: "/placeholder-mindscribe.svg",
+      chartImage: "/placeholder-mindscribe.svg",
+    },
+    designArtifacts: [
+      "/placeholder-mindscribe.svg",
+      "/placeholder-mindscribe.svg",
+    ],
+    context:
+      "Mind Scribe is a journaling and wellness platform designed to inspire daily reflection and emotional well-being.",
+    contextHeading: "Understanding the problem space",
+    challenge:
+      "Users experienced usability friction with existing journaling apps—cluttered interfaces and unclear flows discouraged consistent use.",
+    challengeHeading: "Reducing friction for daily journaling",
+    solution:
+      "Redesigned core flows with clearer hierarchy, reduced cognitive load, and intuitive prompts that encourage reflection without overwhelm.",
+    solutionHeading: "Clearer hierarchy and intuitive prompts",
+    process:
+      "Research → personas → wireframes → usability testing → high-fidelity design → iteration based on feedback.",
+    processHeading: "From research to high-fidelity design",
+    impact: "Improved task completion rates and user retention in follow-up studies.",
+    impactHeading: "Measurable improvements in engagement",
   },
 ];
 
