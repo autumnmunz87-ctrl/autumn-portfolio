@@ -131,11 +131,11 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
               className="flex flex-col gap-2"
               style={
                 isMindScribe
-                  ? { marginTop: "300px", marginBottom: "0px" }
+                  ? { marginTop: "517px", marginBottom: "517px" }
                   : isGameLibrary
-                    ? { marginTop: "300px", marginBottom: "300px" }
+                    ? { marginTop: "539px", marginBottom: "539px" }
                   : isFlyingXCoffee
-                  ? { marginTop: "300px", marginBottom: "48px" }
+                    ? { marginTop: "576px", marginBottom: "48px" }
                     : undefined
               }
             >
