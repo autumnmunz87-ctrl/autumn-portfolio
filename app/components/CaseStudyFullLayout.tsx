@@ -239,6 +239,16 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
                     <SectionImage key={i + 2} src={src} alt={`Research ${i + 4}`} />
                   ))}
                 </>
+              ) : isGameLibrary && data.research.images && data.research.images.length >= 2 ? (
+                <>
+                  <div className="grid grid-cols-1 min-[809px]:grid-cols-2 ms-modal-grid-gap-sm mt-12 mb-12">
+                    <SectionImageCard src={data.research.images[0]} alt="Research 2" />
+                    <SectionImageCard src={data.research.images[1]} alt="Research 3" />
+                  </div>
+                  {data.research.images.slice(2).map((src, i) => (
+                    <SectionImage key={i + 2} src={src} alt={`Research ${i + 4}`} />
+                  ))}
+                </>
               ) : (
                 data.research.images?.map((src, i) => (
                   <SectionImage key={i} src={src} alt={`Research ${i + 2}`} />
@@ -296,6 +306,18 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
                 </div>
                 {data.process.postBodyImages.slice(3).map((src, i) => (
                   <SectionImage key={i + 3} src={src} alt={`Process ${i + 4}`} />
+                ))}
+              </>
+            ) : isGameLibrary && data.process.postBodyImages && data.process.postBodyImages.length >= 4 ? (
+              <>
+                <SectionImage src={data.process.postBodyImages[0]} alt="Process 1" />
+                <SectionImage src={data.process.postBodyImages[1]} alt="Process 2" />
+                <div className="grid grid-cols-1 min-[809px]:grid-cols-2 ms-modal-grid-gap-sm mt-12 mb-12">
+                  <SectionImageCard src={data.process.postBodyImages[2]} alt="Process 3" />
+                  <SectionImageCard src={data.process.postBodyImages[3]} alt="Process 4" />
+                </div>
+                {data.process.postBodyImages.slice(4).map((src, i) => (
+                  <SectionImage key={i + 4} src={src} alt={`Process ${i + 5}`} />
                 ))}
               </>
             ) : (
