@@ -29,6 +29,23 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
   );
 }
 
+function SectionImageCard({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div
+      className="relative w-full overflow-hidden rounded-2xl"
+      style={{ aspectRatio: "728/496" }}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover"
+        sizes="(max-width: 808px) 90vw, 50vw"
+      />
+    </div>
+  );
+}
+
 type CaseStudyFullLayoutProps = {
   slug: string;
 };
@@ -212,9 +229,21 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
               {data.research.image && (
                 <SectionImage src={data.research.image} alt="Research" />
               )}
-              {data.research.images?.map((src, i) => (
-                <SectionImage key={i} src={src} alt={`Research ${i + 2}`} />
-              ))}
+              {isFlyingXCoffee && data.research.images && data.research.images.length >= 2 ? (
+                <>
+                  <div className="grid grid-cols-1 min-[809px]:grid-cols-2 ms-modal-grid-gap-sm mt-12 mb-12">
+                    <SectionImageCard src={data.research.images[0]} alt="Research 2" />
+                    <SectionImageCard src={data.research.images[1]} alt="Research 3" />
+                  </div>
+                  {data.research.images.slice(2).map((src, i) => (
+                    <SectionImage key={i + 2} src={src} alt={`Research ${i + 4}`} />
+                  ))}
+                </>
+              ) : (
+                data.research.images?.map((src, i) => (
+                  <SectionImage key={i} src={src} alt={`Research ${i + 2}`} />
+                ))
+              )}
             </section>
           )}
 
@@ -258,9 +287,22 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
             <p className="ms-modal-subheading">Process</p>
             <h2 className="ms-modal-heading">{data.process.heading}</h2>
             <p className="ms-modal-body">{data.process.body}</p>
-            {data.process.postBodyImages?.map((src, i) => (
-              <SectionImage key={i} src={src} alt={`Process ${i + 1}`} />
-            ))}
+            {isFlyingXCoffee && data.process.postBodyImages && data.process.postBodyImages.length >= 3 ? (
+              <>
+                <SectionImage src={data.process.postBodyImages[0]} alt="Process 1" />
+                <div className="grid grid-cols-1 min-[809px]:grid-cols-2 ms-modal-grid-gap-sm mt-12 mb-12">
+                  <SectionImageCard src={data.process.postBodyImages[1]} alt="Process 2" />
+                  <SectionImageCard src={data.process.postBodyImages[2]} alt="Process 3" />
+                </div>
+                {data.process.postBodyImages.slice(3).map((src, i) => (
+                  <SectionImage key={i + 3} src={src} alt={`Process ${i + 4}`} />
+                ))}
+              </>
+            ) : (
+              data.process.postBodyImages?.map((src, i) => (
+                <SectionImage key={i} src={src} alt={`Process ${i + 1}`} />
+              ))
+            )}
             {data.process.featureCards && data.process.featureCards.length > 0 && (
               <div className="grid grid-cols-1 min-[393px]:grid-cols-2 min-[809px]:grid-cols-4 ms-modal-grid-gap-sm mt-6">
                 {data.process.featureCards.map((card, i) => (
