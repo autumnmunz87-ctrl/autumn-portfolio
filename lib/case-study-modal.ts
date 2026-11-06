@@ -1,10 +1,9 @@
-/**
- * Unified case study modal data – supports Mind Scribe (rich) and other studies (mapped from CaseStudy).
- * Used for the two-column sticky layout in both modal and full page.
- */
-import { mindScribeModalData } from "./mind-scribe-modal";
-import { getCaseStudyBySlug, type CaseStudy } from "./case-studies";
-import { sortPathsByImageFilenameNumber } from "./sort-case-study-images";
+import { mindScribeModalData, type MindScribeModalData } from "./mind-scribe-modal";
+
+export type CaseStudySectionNavItem = {
+  id: string;
+  label: string;
+};
 
 export type CaseStudyModalData = {
   coverImage: string;
@@ -12,114 +11,68 @@ export type CaseStudyModalData = {
   summary: { heading: string; body: string };
   metaGrid: { role: string; skills: string; team: string; timeline: string };
   featureCards: { heading: string; body: string }[];
-  /** Research / Context section */
-  research: { heading: string; body: string; image?: string; images?: string[] };
-  /** Optional user feedback block */
+  research: {
+    heading: string;
+    body: string;
+    image?: string;
+    images?: string[];
+  };
   userFeedback?: { heading: string; body: string };
-  /** Objective / Challenge section */
   objective?: {
     heading: string;
     body: string;
     painPointCards?: { title: string; quote: string }[];
     image?: string;
   };
-  /** Ideation / Process section */
   process: {
     heading: string;
     body: string;
     featureCards?: { title: string; description: string }[];
     ideationImage?: string;
     designProcessImage?: string;
-    /** Single process image for simpler studies */
     image?: string;
-    /** After process body, before other process images (e.g. Flying X) */
     postBodyImages?: string[];
   };
-  /** Final Designs / Solution section */
   finalDesigns: {
     heading: string;
     body: string;
     image1: string;
-    image2?: string;
     additionalImages?: string[];
   };
-  /** Reflections section */
-  reflections: { heading: string; body: string; finalDesign2Image?: string; userReflectionsImage?: string };
-  /** Projected Impact */
-  projectedImpact: { heading: string; bodyParagraph1: string; bodyParagraph2?: string };
+  reflections: {
+    heading: string;
+    body: string;
+    finalDesign2Image?: string;
+    userReflectionsImage?: string;
+  };
+  projectedImpact: {
+    heading: string;
+    bodyParagraph1: string;
+    bodyParagraph2?: string;
+  };
 };
 
-function buildFromCaseStudy(study: CaseStudy): CaseStudyModalData {
-  const skills = study.tools ?? "-";
-  const team = study.team ?? "-";
-  const timeline = study.duration ?? "-";
-  const sortedArtifacts =
-    study.designArtifacts && study.designArtifacts.length > 0
-      ? sortPathsByImageFilenameNumber([...study.designArtifacts])
-      : undefined;
+export const SECTION_NAV: CaseStudySectionNavItem[] = [
+  { id: "summary", label: "Summary" },
+  { id: "research", label: "Research" },
+  { id: "process", label: "Process" },
+  { id: "final-designs", label: "Final Designs" },
+  { id: "reflections", label: "Reflections" },
+  { id: "projected-impact", label: "Projected Impact" },
+];
 
-  return {
-    coverImage: study.image,
-    coverAlt: `${study.title} Cover`,
-    summary: {
-      heading: study.subtitle ?? "Overview",
-      body: study.intro ?? study.description,
-    },
-    metaGrid: {
-      role: study.role ?? "-",
-      skills,
-      team,
-      timeline,
-    },
-    featureCards: study.insights ?? [],
-    research: {
-      heading: study.contextHeading ?? "Context",
-      body: study.context ?? "",
-      image: study.contextImage,
-      images: study.contextImages,
-    },
-    process: {
-      heading: study.processHeading ?? "Process",
-      body: study.process ?? "",
-      image: study.processImage,
-      postBodyImages: study.processImages,
-    },
-    finalDesigns: {
-      heading: study.solutionHeading ?? "Final Designs",
-      body: study.solution ?? "",
-      image1:
-        study.solutionImage ??
-        sortedArtifacts?.[0] ??
-        study.designArtifacts?.[0] ??
-        study.dataBlock?.uiImage ??
-        study.image,
-      additionalImages:
-        sortedArtifacts && sortedArtifacts.length > 1
-          ? sortedArtifacts.slice(1)
-          : study.designArtifacts?.slice(1) ?? (study.dataBlock ? [study.dataBlock.chartImage] : []),
-    },
-    reflections: {
-      heading: "Reflections",
-      body:
-        "This project provided valuable experience in UX design, from research through to final implementation. The process reinforced the importance of user-centered design and iterative refinement.",
-      userReflectionsImage: study.impactImage,
-    },
-    projectedImpact: {
-      heading: study.impactHeading ?? "Projected Impact",
-      bodyParagraph1: study.impact ?? "",
-    },
-  };
-}
-
-function mindScribeToUnified(): CaseStudyModalData {
-  const data = mindScribeModalData;
+function mapMindScribeModalData(data: MindScribeModalData): CaseStudyModalData {
   return {
     coverImage: data.coverImage,
-    coverAlt: "Mind Scribe Cover",
+    coverAlt: "Mind Scribe project cover",
     summary: data.summary,
     metaGrid: data.metaGrid,
     featureCards: data.featureCards,
-    research: data.marketResearch,
+    research: {
+      heading: data.marketResearch.heading,
+      body: data.marketResearch.body,
+      image: data.marketResearch.image,
+    },
     userFeedback: data.userFeedback,
     objective: data.objective,
     process: {
@@ -128,29 +81,139 @@ function mindScribeToUnified(): CaseStudyModalData {
       featureCards: data.ideationProcess.featureCards,
       ideationImage: data.ideationProcess.ideationImage,
       designProcessImage: data.ideationProcess.designProcessImage,
+      postBodyImages: [
+        data.ideationProcess.ideationImage,
+        data.ideationProcess.designProcessImage,
+      ].filter(Boolean),
     },
-    finalDesigns: data.finalDesigns,
+    finalDesigns: {
+      heading: data.finalDesigns.heading,
+      body: data.finalDesigns.body,
+      image1: data.finalDesigns.image1,
+    },
     reflections: data.reflections,
-    projectedImpact: data.projectedImpact,
+    projectedImpact: {
+      heading: data.projectedImpact.heading,
+      bodyParagraph1: data.projectedImpact.bodyParagraph1,
+      bodyParagraph2: data.projectedImpact.bodyParagraph2,
+    },
   };
 }
 
+const gameLibraryModalData: CaseStudyModalData = {
+  coverImage: "/game-library-hero.png",
+  coverAlt: "Game Library project cover",
+  summary: {
+    heading: "Designing a nostalgic discovery flow that still feels modern and usable.",
+    body:
+      "Game Library is a retro-inspired gaming discovery site that blends early 2000s personality with clearer navigation, stronger hierarchy, and a more responsive browsing experience.",
+  },
+  metaGrid: {
+    role: "UX Designer",
+    skills: "Figma, Adobe CC",
+    team: "Solo",
+    timeline: "September 2024 - November 2024",
+  },
+  featureCards: [
+    {
+      heading: "Context",
+      body: "A retro-inspired game discovery experience built around exploration, mood, and easy browsing.",
+    },
+    {
+      heading: "Challenge",
+      body: "Balancing nostalgic visual energy with modern usability and accessibility across devices.",
+    },
+    {
+      heading: "Solution",
+      body: "A playful visual system with cleaner content hierarchy, semantic structure, and responsive layouts.",
+    },
+  ],
+  research: {
+    heading: "Understanding the user need",
+    body:
+      "The concept was inspired by the discovery-heavy feel of early gaming portals: bold visual treatment, genre exploration, and a strong sense of personality. The main challenge was retaining that charm while making the experience clearer and easier to scan for modern users.",
+    image: "/game-library-research-1.png",
+    images: [
+      "/game-library-research-2.png",
+      "/game-library-research-3.png",
+    ],
+  },
+  userFeedback: {
+    heading: "User feedback",
+    body:
+      "Early feedback reinforced that the visual direction felt memorable and fun, but users wanted clearer hierarchy, stronger callouts for key titles, and more consistent presentation across screen sizes.",
+  },
+  objective: {
+    heading: "Create a playful discovery experience without sacrificing usability",
+    body:
+      "The goal was to design a game browsing experience that felt like a nostalgic portal while still feeling clear, efficient, and accessible.",
+    painPointCards: [
+      {
+        title: "Nostalgia overload",
+        quote: "The vibe was exciting, but the content hierarchy could feel crowded.",
+      },
+      {
+        title: "Modern accessibility",
+        quote: "The interface needed stronger contrast and more consistent spacing and rhythm.",
+      },
+      {
+        title: "Discovery friction",
+        quote: "Users needed clearer paths to explore genres, ratings, and standout game picks.",
+      },
+      {
+        title: "Responsive experience",
+        quote: "The layout needed to stay readable and comfortable across desktop and mobile screens.",
+      },
+    ],
+    image: "/game-library-summary-2.png",
+  },
+  process: {
+    heading: "Refining the experience through iteration",
+    body:
+      "I moved from mood boards and style tiles into a more structured component system, then sharpened the layout through responsive breakpoints and visual accessibility checks.",
+    featureCards: [
+      { title: "Mood boarding", description: "Explored retro gaming aesthetics and nostalgic UI references." },
+      { title: "Style tiles", description: "Defined the palette, typography, and visual system." },
+      { title: "Component library", description: "Built reusable interactive patterns for browsing and discovery." },
+      { title: "Responsive testing", description: "Adjusted for readability, touch comfort, and layout consistency." },
+    ],
+    ideationImage: "/game-library-ideation-design-1.png",
+    designProcessImage: "/game-library-ideation-design-2.png",
+    postBodyImages: [
+      "/game-library-process-1.png",
+      "/game-library-process-2.png",
+      "/game-library-process-3.png",
+      "/images%20game%20library/game%20library%20image%207%20replacement.png",
+    ],
+  },
+  finalDesigns: {
+    heading: "A polished retro-modern game discovery experience",
+    body:
+      "The final direction blends bold color, playful layout rhythm, and a structured browsing experience that still feels approachable and easy to use.",
+    image1: "/game-library-final-design.png",
+    additionalImages: ["/game-library-summary-3.png"],
+  },
+  reflections: {
+    heading: "What this project reinforced",
+    body:
+      "The project showed that nostalgic design can still feel current when the structure is clear and the interaction patterns are intentional. The strongest work happened when the visual language supported the experience rather than competing with it.",
+    finalDesign2Image: "/game-library-reflections.png",
+    userReflectionsImage: "/game-library-user-feedback-2.png",
+  },
+  projectedImpact: {
+    heading: "Projected impact",
+    bodyParagraph1:
+      "The concept aims to create a more engaging discovery flow for retro and indie game audiences, helping users find titles quickly while preserving the playful personality of the brand.",
+    bodyParagraph2:
+      "By combining early web charm with modern UI clarity, the experience is designed to feel memorable, useful, and approachable across different device sizes.",
+  },
+};
+
+const caseStudyModalDataMap: Record<string, CaseStudyModalData> = {
+  "mind-scribe": mapMindScribeModalData(mindScribeModalData),
+  "game-library": gameLibraryModalData,
+};
+
 export function getCaseStudyModalData(slug: string): CaseStudyModalData | null {
-  const study = getCaseStudyBySlug(slug);
-  if (!study) return null;
-
-  if (slug === "mind-scribe") {
-    return mindScribeToUnified();
-  }
-
-  return buildFromCaseStudy(study);
+  return caseStudyModalDataMap[slug] ?? null;
 }
-
-export const SECTION_NAV = [
-  { id: "summary", label: "Summary" },
-  { id: "research", label: "Research" },
-  { id: "process", label: "Process" },
-  { id: "final-designs", label: "Final Designs" },
-  { id: "reflections", label: "Reflections" },
-  { id: "projected-impact", label: "Projected Impact" },
-] as const;

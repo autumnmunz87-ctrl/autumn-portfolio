@@ -31,7 +31,7 @@ export default function AboutPage() {
       <section className="py-20 min-[809px]:py-28">
         <div className="grid gap-14 min-[809px]:grid-cols-2 min-[809px]:items-center min-[809px]:gap-20">
           <div>
-            <h1 className="hero-title mb-6">
+            <h1 className="hero-title mb-6 min-[809px]:text-[24px] min-[1201px]:text-[24px]">
               I&apos;m Autumn, I like to design things that bring people closer.
             </h1>
             <p className="about-bio leading-relaxed">

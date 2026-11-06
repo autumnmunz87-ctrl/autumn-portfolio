@@ -535,7 +535,7 @@ body {
 }
 @media (min-width: 1201px) {
   .hero-title {
-    font-size: 48px;
+    font-size: 36px;
   }
 }
 
@@ -548,7 +548,7 @@ body {
 }
 @media (min-width: 1201px) {
   .section-title {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 
@@ -1105,9 +1105,4 @@ body {
   color: var(--primary-black);
   font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: 24px;
-}
-@media (min-width: 809px) {
-  .footer-title {
-    font-size: 32px;
-  }
 }

@@ -33,19 +33,14 @@ export type CaseStudy = {
   process?: string;
   processHeading?: string;
   processImage?: string;
-  /** Shown in order after the process body (e.g. Flying X Coffee) */
+  /** Shown in order after the process body for case studies with additional layout sections. */
   processImages?: string[];
   impact?: string;
   impactHeading?: string;
   impactImage?: string;
 };
 
-const FLYING_X_COFFEE_IMAGE_DIR = "images flying x coffee";
 const GAME_LIBRARY_IMAGE_DIR = "images game library";
-
-function flyingXCoffeeImageFile(n: number): string {
-  return "/" + [FLYING_X_COFFEE_IMAGE_DIR, `flying x coffee image ${n}.png`].map(encodeURIComponent).join("/");
-}
 
 function GameLibraryImageFile(n: number): string {
   return "/" + [GAME_LIBRARY_IMAGE_DIR, `game library image ${n}.png`].map(encodeURIComponent).join("/");
@@ -112,65 +107,28 @@ export const caseStudies: CaseStudy[] = [
       "Mood boarding → style tiles → component library → responsive breakpoints → accessibility audit.",
     impact: "Positive feedback on both aesthetic appeal and ease of use.",
   },
-  {
-    slug: "flying-x-coffee",
-    title: "Flying X Coffee",
-    subtitle: "Coffee shop website",
-    description:
-      "Coffee shop website that enhances customer engagement and maximizes usability of key features.",
-    intro:
-      "A coffee shop website designed to reflect the brand and make it easy for customers to discover menus, order, and sign up for events.",
-    image: "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%201.png",
-    href: "/work/flying-x-coffee",
-    tags: ["UI/UX", "Web Design"],
-    role: "UX Designer",
-    team: "Solo",
-    duration: "July 2024 - October 2024",
-    tools: "Figma",
-    insights: [
-      { heading: "Context", body: "A digital presence to reflect the brand and help customers discover menus and events." },
-      { heading: "Challenge", body: "The previous site was hard to navigate and didn't surface key actions like ordering." },
-      { heading: "Solution", body: "Clean layout with prominent CTAs and simplified navigation structure." },
-    ],
-    dataBlock: {
-      uiImage: "/placeholder-flyingx.svg",
-      chartImage: "/placeholder-flyingx.svg",
-    },
-    contextImages: [
-      "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%206%20replacement.png",
-      "/images%20flying%20x%20coffee/flying%20x%20coffee%20image%207%20replacement.png",
-    ],
-    processImages: [3, 4, 5].map(flyingXCoffeeImageFile),
-    designArtifacts: [2, 8].map(flyingXCoffeeImageFile),
-    context:
-      "Flying X Coffee wanted a digital presence that reflected their brand and made it easy for customers to discover menus and events.",
-    challenge:
-      "The previous site was hard to navigate and did not clearly surface key actions like ordering and event sign-up.",
-    solution:
-      "Created a clean, focused layout with prominent CTAs and a simplified navigation structure.",
-    process:
-      "Stakeholder interviews → competitive audit → information architecture → visual design → user testing.",
-    impact: "Increased engagement with menu pages and event registration.",
-  },
+    // Replace the existing { slug: "mind-scribe", ... } object inside the caseStudies array
+// in case-studies.ts with this one. Image paths and tags are unchanged.
+// TODO: set `duration` once you confirm the real project dates.
   {
     slug: "mind-scribe",
     title: "Mind Scribe",
     subtitle: "Journaling & wellness platform",
     description:
-      "Journaling and wellness platform designed to inspire users and solve frequently experienced usability issues.",
+      "Journaling and wellness app concept built from a 12-person survey, competitor review, and published research.",
     intro:
-      "Journaling and wellness platform designed to inspire daily reflection and emotional well-being. This case study explores the design process from research to high-fidelity prototypes.",
-    image: "/mind-scribe-hero.png",
+      "A journaling and wellness app concept designed for people who want to reflect but have not stuck with an app. This case study covers the research, the design process, and what the data suggests about the market.",
+    image: "/images%20mind%20scribe/mind%20scribe%20hero.png.png",
     href: "/work/mind-scribe",
     tags: ["UI/UX", "Prototyping", "Research"],
-    role: "UX Designer",
+    role: "UX Designer & Researcher",
     team: "Solo",
-    duration: "March 2024 - June 2024",
-    tools: "Figma, Miro",
+    duration: "[Confirm dates]",
+    tools: "Figma, Miro, Google Forms",
     insights: [
-      { heading: "Context", body: "A journaling platform designed to inspire daily reflection and emotional well-being." },
-      { heading: "Challenge", body: "Users faced cluttered interfaces and unclear flows that discouraged consistent use." },
-      { heading: "Solution", body: "Redesigned flows with clearer hierarchy, reduced cognitive load, and intuitive prompts." },
+      { heading: "Context", body: "11 of 12 survey respondents journal on paper, and only 1 currently uses a journaling app." },
+      { heading: "Challenge", body: "6 of 12 had stopped using a journaling app, citing crowded interfaces, ads and paywalls, and notifications." },
+      { heading: "Solution", body: "A customizable, uncluttered app with themes and guided prompts that make starting an entry easy." },
     ],
     dataBlock: {
       uiImage: "/placeholder-mindscribe.svg",
@@ -181,19 +139,20 @@ export const caseStudies: CaseStudy[] = [
       "/placeholder-mindscribe.svg",
     ],
     context:
-      "Mind Scribe is a journaling and wellness platform designed to inspire daily reflection and emotional well-being.",
+      "Mind Scribe is a journaling and wellness app concept. A 12-person survey found that 11 of 12 respondents use pen and paper and only 1 uses a journaling app.",
     contextHeading: "Understanding the problem space",
     challenge:
-      "Users experienced usability friction with existing journaling apps—cluttered interfaces and unclear flows discouraged consistent use.",
+      "Half of the people I surveyed had stopped using a journaling app. Their reasons included crowded or unattractive interfaces, ads and paywalls, and notifications, and published data shows mental health apps lose most users within a month (median 30-day retention of 3.3%).",
     challengeHeading: "Reducing friction for daily journaling",
     solution:
-      "Redesigned core flows with clearer hierarchy, reduced cognitive load, and intuitive prompts that encourage reflection without overwhelm.",
-    solutionHeading: "Clearer hierarchy and intuitive prompts",
+      "A customizable, uncluttered app with themes, mood check-ins, and guided prompts such as Morning Pages and Evening Reflection. 9 of 12 respondents listed customization among their top three features.",
+    solutionHeading: "Customization and guided prompts",
     process:
       "Research → personas → wireframes → usability testing → high-fidelity design → iteration based on feedback.",
     processHeading: "From research to high-fidelity design",
-    impact: "Improved task completion rates and user retention in follow-up studies.",
-    impactHeading: "Measurable improvements in engagement",
+    impact:
+      "Concept stage, not launched. 8 of 12 survey respondents (67%) would pay for a journaling app, 5 of them in the $2 to $5 per month range. Industry benchmarks suggest real conversion would be far lower, so the next step is testing with a larger sample.",
+    impactHeading: "What the data suggests about the market",
   },
 ];
 

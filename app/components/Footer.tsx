@@ -24,7 +24,7 @@ export default function Footer() {
               </span>
             </Link>
           </div>
-          <div className="text-left">
+          <div className="text-center">
             <h2 className="footer-title mb-2">Thanks for stopping by</h2>
             <p className="text-subheading-1 text-[18px]">Come again soon</p>
           </div>
