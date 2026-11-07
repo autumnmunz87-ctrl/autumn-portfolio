@@ -67,7 +67,7 @@ export const caseStudies: CaseStudy[] = [
       "Gaming website that balances early 2000s nostalgia with modern usability.",
     intro:
       "A discovery site for retro and indie games, evoking early 2000s web aesthetics while maintaining modern accessibility and responsiveness.",
-    image: "/game-library-hero.png",
+    image: "/images game library/game-library-hero.png",
     href: "/work/game-library",
     tags: ["UI/UX", "Speculative", "Visual Design"],
     role: "UX Designer",

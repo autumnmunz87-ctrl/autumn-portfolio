@@ -100,8 +100,10 @@ function mapMindScribeModalData(data: MindScribeModalData): CaseStudyModalData {
   };
 }
 
+const gl = (file: string) =>
+  "/" + ["images game library", file].map(encodeURIComponent).join("/");
 const gameLibraryModalData: CaseStudyModalData = {
-  coverImage: "/game-library-hero.png",
+  coverImage: gl("game-library-hero.png"),
   coverAlt: "Game Library project cover",
   summary: {
     heading: "Designing a nostalgic discovery flow that still feels modern and usable.",
@@ -132,10 +134,10 @@ const gameLibraryModalData: CaseStudyModalData = {
     heading: "Understanding the user need",
     body:
       "The concept was inspired by the discovery-heavy feel of early gaming portals: bold visual treatment, genre exploration, and a strong sense of personality. The main challenge was retaining that charm while making the experience clearer and easier to scan for modern users.",
-    image: "/game-library-research-1.png",
+    image: gl("game-library-research-1.png"),
     images: [
-      "/game-library-research-2.png",
-      "/game-library-research-3.png",
+      gl("game-library-research-2.png"),
+      gl("game-library-research-3.png"),
     ],
   },
   userFeedback: {
@@ -165,7 +167,7 @@ const gameLibraryModalData: CaseStudyModalData = {
         quote: "The layout needed to stay readable and comfortable across desktop and mobile screens.",
       },
     ],
-    image: "/game-library-summary-2.png",
+    image: gl("game-library-summary-2.png"),
   },
   process: {
     heading: "Refining the experience through iteration",
@@ -177,28 +179,23 @@ const gameLibraryModalData: CaseStudyModalData = {
       { title: "Component library", description: "Built reusable interactive patterns for browsing and discovery." },
       { title: "Responsive testing", description: "Adjusted for readability, touch comfort, and layout consistency." },
     ],
-    ideationImage: "/game-library-ideation-design-1.png",
-    designProcessImage: "/game-library-ideation-design-2.png",
     postBodyImages: [
-      "/game-library-process-1.png",
-      "/game-library-process-2.png",
-      "/game-library-process-3.png",
-      "/images%20game%20library/game%20library%20image%207%20replacement.png",
+      gl("game-library-process-1.png"),
+      gl("game-library-process-2.png"),
+      gl("game-library-process-3.png"),
     ],
   },
   finalDesigns: {
     heading: "A polished retro-modern game discovery experience",
     body:
       "The final direction blends bold color, playful layout rhythm, and a structured browsing experience that still feels approachable and easy to use.",
-    image1: "/game-library-final-design.png",
-    additionalImages: ["/game-library-summary-3.png"],
+    image1: gl("game-library-final-design.png"),
+    additionalImages: [gl("game-library-summary-3.png")],
   },
   reflections: {
     heading: "What this project reinforced",
     body:
       "The project showed that nostalgic design can still feel current when the structure is clear and the interaction patterns are intentional. The strongest work happened when the visual language supported the experience rather than competing with it.",
-    finalDesign2Image: "/game-library-reflections.png",
-    userReflectionsImage: "/game-library-user-feedback-2.png",
   },
   projectedImpact: {
     heading: "Projected impact",
