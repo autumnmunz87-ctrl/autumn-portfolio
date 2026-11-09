@@ -1,3 +1,4 @@
+// NOTE: Do not alter the layouts of paragraphs or images inside the case studies.
 "use client";
 
 import Image from "next/image";

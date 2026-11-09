@@ -19,10 +19,14 @@ export default function CaseStudyModal({ study, onClose }: CaseStudyModalProps) 
   );
 
   useEffect(() => {
-    if (study) {
-      window.addEventListener("keydown", handleEscape);
-    }
+    if (!study) return;
+
+    const originalOverflow = window.document.body.style.overflow;
+    window.document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleEscape);
+
     return () => {
+      window.document.body.style.overflow = originalOverflow;
       window.removeEventListener("keydown", handleEscape);
     };
   }, [study, handleEscape]);
@@ -31,25 +35,21 @@ export default function CaseStudyModal({ study, onClose }: CaseStudyModalProps) 
 
   return (
     <div
-      className="fixed left-0 top-0 z-50 overflow-y-auto"
-      style={{ width: "100vw", height: "100vh" }}
+      className="fixed inset-0 z-50"
       aria-modal
       role="dialog"
+      onClick={onClose}
     >
-      {/* Backdrop: fixed, covers viewport, click to close */}
       <div
-        className="fixed inset-0 z-0 bg-primary-black/60 backdrop-blur-sm"
-        onClick={onClose}
+        className="absolute inset-0 z-0 bg-primary-black/60 backdrop-blur-sm"
         aria-hidden
       />
 
-      {/* Modal content wrapper – two-column sticky layout for all case studies */}
       <div
-        className="relative z-10 mx-auto my-8 flex w-[90%] max-w-[1200px] min-[1201px]:max-w-[1440px] max-h-[calc(100vh-4rem)] flex-col rounded-lg bg-primary-white py-6 shadow-2xl"
+        className="absolute left-1/2 top-1/2 z-10 w-[85vw] max-w-[1600px] max-h-[calc(100vh-3rem)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[24px] bg-primary-white shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top-right buttons */}
-        <div className="absolute right-4 top-4 z-20 flex shrink-0 items-center gap-2">
+        <div className="absolute left-4 top-4 z-20 flex shrink-0 items-center gap-2">
           <Link
             href={`/work/${study.slug}`}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-white/95 text-foreground-muted shadow-sm transition-colors hover:bg-primary-white hover:text-foreground"
@@ -72,6 +72,9 @@ export default function CaseStudyModal({ study, onClose }: CaseStudyModalProps) 
               <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
             </svg>
           </Link>
+        </div>
+
+        <div className="absolute right-4 top-4 z-20 flex shrink-0 items-center gap-2">
           <button
             onClick={onClose}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-white/95 text-foreground-muted shadow-sm transition-colors hover:bg-primary-white hover:text-foreground"
@@ -94,7 +97,7 @@ export default function CaseStudyModal({ study, onClose }: CaseStudyModalProps) 
           </button>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-y-auto scroll-smooth pt-20">
+        <div className="max-h-[calc(100vh-3rem)] overflow-y-auto scroll-smooth pt-20">
           <CaseStudyFullLayout slug={study.slug} />
         </div>
       </div>

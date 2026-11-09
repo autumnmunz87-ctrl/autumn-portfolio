@@ -182,6 +182,7 @@ body {
   object-fit: contain;
 }
 
+/* NOTE: Do not alter the layouts of paragraphs or images inside the case studies. */
 /* ===== Mind Scribe Modal – Full structure ===== */
 /* Left column spacing: vertical flex with explicit gaps */
 .case-study-left {
