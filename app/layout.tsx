@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   title: "Autumn Munz | UX & Product Design Portfolio",
   description: "UX designer passionate about interface design and functionality.",
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/icons/initial-icon.png?v=2",
+    shortcut: "/icons/initial-icon.png?v=2",
+    apple: "/icons/initial-icon.png?v=2",
   },
 };
 

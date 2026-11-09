@@ -6,6 +6,7 @@
   --primary-black-secondary: rgba(48, 47, 43, 0.8);
   --primary-white: #F6F4F1;
   --accent-orange: #FF8851;
+  --card-bg: #EAE8E5;
 
   --background: var(--primary-white);
   --foreground: var(--primary-black);

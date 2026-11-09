@@ -1,35 +1,50 @@
+import Image from "next/image";
 import Link from "next/link";
 import SocialButtons from "./SocialButtons";
 import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="footer-full-bleed border-t border-primary-black-secondary pt-12 pb-8">
-      <div className="footer-outer">
-        <div className="container flex flex-col gap-10">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="group block" aria-label="Autumn - Home">
+    <footer className="w-full border-t border-[rgba(48,47,43,0.15)] bg-[var(--background)] pt-12 pb-8">
+      <div className="page-shell">
+        <div className="grid grid-cols-1 items-center gap-8 text-center md:grid-cols-[1fr_auto_1fr] md:text-left">
+          <div className="flex justify-center md:justify-start">
+            <Link href="/" className="group block shrink-0" aria-label="Autumn - Home">
               <Logo className="h-[58px] w-[59px]" />
             </Link>
-            <Link
-              href="#top"
-              className="flex items-center gap-2 transition-opacity hover:opacity-80"
-              aria-label="Back to top"
-            >
-              <span className="text-body-regular text-[#808080]">Back to top</span>
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-black-secondary bg-primary-white text-foreground-muted transition-colors hover:border-accent-orange hover:bg-accent-orange/10 hover:text-accent-orange">
-                <svg className="h-6 w-6" viewBox="0 0 640 640" fill="currentColor" aria-hidden>
-                  <path d="M342.6 73.4C330.1 60.9 309.8 60.9 297.3 73.4L137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7C149.8 291.2 170.1 291.2 182.6 278.7L288 173.3L288 544C288 561.7 302.3 576 320 576C337.7 576 352 561.7 352 544L352 173.3L457.4 278.7C469.9 291.2 490.2 291.2 502.7 278.7C515.2 266.2 515.2 245.9 502.7 233.4L342.7 73.4z" />
-                </svg>
-              </span>
-            </Link>
           </div>
+
           <div className="text-center">
-            <h2 className="footer-title mb-2">Thanks for stopping by</h2>
-            <p className="text-subheading-1 text-[18px]">Come again soon</p>
+            <h2 className="text-[22px] font-normal leading-tight text-primary-black">
+              Thanks for stopping by
+            </h2>
+            <p className="mt-1 text-[16px] leading-normal text-primary-black/60">
+              Come again soon
+            </p>
           </div>
-          <div className="flex justify-end">
-            <SocialButtons />
+
+          <div className="flex flex-col items-center gap-3 md:items-end">
+            <div className="flex items-center gap-3">
+              <Link
+                href="#top"
+                className="inline-flex items-center gap-2 rounded-full border border-[rgba(48,47,43,0.2)] bg-transparent px-4 py-2 text-[16px] leading-none text-primary-black transition-opacity hover:opacity-80"
+                aria-label="Back to top"
+              >
+                <span>Back to top</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-orange text-primary-white">
+                  <Image
+                    src="/icons/arrow-up.svg"
+                    alt=""
+                    width={18}
+                    height={18}
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
+                </span>
+              </Link>
+              <SocialButtons />
+            </div>
           </div>
         </div>
       </div>
