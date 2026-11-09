@@ -29,12 +29,13 @@ export default function CaseStudyCard({ study, onClick }: CaseStudyCardProps) {
       aria-disabled={isComingSoon}
       className={`group block w-full overflow-hidden text-left ${comingSoonCardStateClasses}`}
     >
-      <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] bg-primary-black/5 shadow-none">
+      <div className="relative aspect-[1056/560] overflow-hidden rounded-[24px] bg-primary-black/5 shadow-none">
         <Image
           src={study.image}
           alt={study.title}
           fill
-          className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+          className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+          style={{ objectPosition: "center" }}
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-primary-black/20 via-transparent to-transparent" aria-hidden />

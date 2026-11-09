@@ -78,23 +78,15 @@ body.case-study-open header {
   display: none !important;
 }
 
-/* Global container - used by navbar and all major sections */
-/* Mobile/Tablet: 90% | Desktop: max 1200px | Large Desktop: max 1440px */
-.container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
+.page-shell {
+  width: 100%;
+  max-width: 2200px;
+  margin-inline: auto;
+  padding-inline: 3.1vw;
 }
-@media (min-width: 809px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-@media (min-width: 1201px) {
-  .container {
-    max-width: 1440px;
+@media (max-width: 767px) {
+  .page-shell {
+    padding-inline: 16px;
   }
 }
 

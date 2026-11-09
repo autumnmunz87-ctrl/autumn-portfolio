@@ -7,7 +7,7 @@ export default function MainLayout({
 }) {
   return (
     <div id="top" className="flex min-h-screen flex-col">
-      <div className="container flex-1">{children}</div>
+      <div className="page-shell flex-1">{children}</div>
       <Footer />
     </div>
   );

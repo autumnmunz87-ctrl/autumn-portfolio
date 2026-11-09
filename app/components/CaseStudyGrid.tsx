@@ -14,7 +14,7 @@ export default function CaseStudyGrid({ caseStudies }: CaseStudyGridProps) {
 
   return (
     <>
-      <div className="grid w-full grid-cols-1 gap-6 min-[809px]:grid-cols-2 min-[809px]:gap-6">
+      <div className="grid w-full grid-cols-1 gap-x-[26px] gap-y-[52px] min-[809px]:grid-cols-2">
         {caseStudies.map((study) => (
           <CaseStudyCard
             key={study.slug}
