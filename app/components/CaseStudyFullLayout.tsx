@@ -241,6 +241,9 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
               <p className="ms-modal-subheading">User Feedback</p>
               <h2 className="ms-modal-heading">{data.userFeedback.heading}</h2>
               <p className="ms-modal-body">{data.userFeedback.body}</p>
+              {data.userFeedback.image && (
+                <SectionImage src={data.userFeedback.image} alt="Survey results" />
+              )}
             </section>
           )}
 
@@ -333,6 +336,20 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
             <p className="ms-modal-subheading">Reflections</p>
             <h2 className="ms-modal-heading">{data.reflections.heading}</h2>
             <p className="ms-modal-body">{data.reflections.body}</p>
+            {data.reflections.cards && data.reflections.cards.length > 0 && (
+              <div className="grid grid-cols-1 min-[393px]:grid-cols-2 ms-modal-grid-gap-sm mt-6">
+                {data.reflections.cards.map((card, i) => (
+                  <article
+                    key={i}
+                    className="flex flex-col rounded-xl p-6"
+                    style={{ backgroundColor: "rgba(48, 47, 43, 0.06)" }}
+                  >
+                    <h3 className="ms-modal-card-title">{card.title}</h3>
+                    <p className="ms-modal-card-desc">{card.description}</p>
+                  </article>
+                ))}
+              </div>
+            )}
             {data.reflections.finalDesign2Image && (
               <SectionImage src={data.reflections.finalDesign2Image} alt="Design" />
             )}

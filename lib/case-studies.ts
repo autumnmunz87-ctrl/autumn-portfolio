@@ -33,7 +33,6 @@ export type CaseStudy = {
   process?: string;
   processHeading?: string;
   processImage?: string;
-  /** Shown in order after the process body for case studies with additional layout sections. */
   processImages?: string[];
   impact?: string;
   impactHeading?: string;
@@ -42,8 +41,8 @@ export type CaseStudy = {
 
 const GAME_LIBRARY_IMAGE_DIR = "images game library";
 
-function GameLibraryImageFile(n: number): string {
-  return "/" + [GAME_LIBRARY_IMAGE_DIR, `game library image ${n}.png`].map(encodeURIComponent).join("/");
+function GameLibraryImageFile(filename: string): string {
+  return "/" + [GAME_LIBRARY_IMAGE_DIR, filename].map(encodeURIComponent).join("/");
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -67,7 +66,7 @@ export const caseStudies: CaseStudy[] = [
       "Gaming website that balances early 2000s nostalgia with modern usability.",
     intro:
       "A discovery site for retro and indie games, evoking early 2000s web aesthetics while maintaining modern accessibility and responsiveness.",
-    image: "/images game library/game-library-hero.png",
+    image: GameLibraryImageFile("game-library-hero.png"),
     href: "/work/game-library",
     tags: ["UI/UX", "Speculative", "Visual Design"],
     role: "UX Designer",
@@ -80,23 +79,21 @@ export const caseStudies: CaseStudy[] = [
       { heading: "Solution", body: "Period-appropriate typography and color palettes with contemporary layout patterns." },
     ],
     dataBlock: {
-      uiImage: "/placeholder-gamelibrary.svg",
+      uiImage: "game-library-research-1.png",
       chartImage: "/placeholder-gamelibrary.svg",
     },
-    contextImage: "/images%20game%20library/game%20library%20image%202%20replace.png",
+        contextImage: GameLibraryImageFile("game-library-research-1.png"),
     contextImages: [
-      "/images%20game%20library/game%20library%20image%203%20replacement.png",
-      "/images%20game%20library/game%20library%20image%204%20replacement.png",
+      GameLibraryImageFile("game-library-research-2.png"),
+      GameLibraryImageFile("game-library-research-3.png"),
     ],
     processImages: [
-      GameLibraryImageFile(5),
-      GameLibraryImageFile(6),
-      "/images%20game%20library/game%20library%20image%207%20replacement.png",
-      "/images%20game%20library/game%20library%20image%208%20replacement.png",
+      GameLibraryImageFile("game-library-process-1.png"),
+      GameLibraryImageFile("game-library-process-2.png"),
     ],
     designArtifacts: [],
-    solutionImage: GameLibraryImageFile(9),
-    impactImage: GameLibraryImageFile(10),
+    solutionImage: GameLibraryImageFile("game-library-final-design.png"),
+    impactImage: GameLibraryImageFile("game-library-summary-3.png"),
     context:
       "Game Library is a discovery site for retro and indie games, aiming to evoke early 2000s web aesthetics while staying usable.",
     challenge:

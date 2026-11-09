@@ -23,6 +23,7 @@ export type MindScribeModalData = {
   userFeedback: {
     heading: string;
     body: string;
+    image?: string;
   };
   objective: {
     heading: string;
@@ -34,8 +35,8 @@ export type MindScribeModalData = {
     heading: string;
     body: string;
     featureCards: { title: string; description: string }[];
-    ideationImage: string;
-    designProcessImage: string;
+    ideationImage?: string;
+    designProcessImage?: string;
   };
   finalDesigns: {
     heading: string;
@@ -45,6 +46,7 @@ export type MindScribeModalData = {
   reflections: {
     heading: string;
     body: string;
+    cards?: { title: string; description: string }[];
     finalDesign2Image?: string;
     userReflectionsImage?: string;
   };
@@ -93,13 +95,14 @@ export const mindScribeModalData: MindScribeModalData = {
     heading: "How can I add value?",
     body:
       "I identified common pain points that were echoed across competitor apps. Users frequently voiced frustrations with unattractive, unresponsive user interfaces, lack of customization, and intrusive ads. Additionally, many apps required expensive subscriptions for features that should have been included by default. A key takeaway was the demand for a balance between a visually appealing interface and user-friendly features.",
-      image: mindScribeImageFile("mind-scribe-survey-features.png"),
+      image: mindScribeImageFile("mind scribe user feedback.png.png"),
   },
   userFeedback: {
     heading:
-      "I surveyed a concentrated gcroup of users to better understand their journaling habits and preferences.",
+      "I surveyed a concentrated group of users to better understand their journaling habits and preferences.",
     body:
       "While the majority of respondents preferred traditional pen-and-paper journaling, many expressed interest in an app that could provide them with thoughtful prompts, track their wellness journey, and store their entries securely. The most frequent complaints included a lack of dark mode, aesthetically unpleasing interfaces, excessive ads, and the risk of losing important data. Users also indicated dissatisfaction with subscription pricing models that did not justify the lack of compelling features.",
+      image: mindScribeImageFile("mind-scribe-survey-features.png"),
   },
   objective: {
     heading: "This created an opportunity for me to create a captivating and intuitive app.",
@@ -111,7 +114,7 @@ export const mindScribeModalData: MindScribeModalData = {
       { title: "Monetization issues", quote: "Intrusive ads, expensive subscriptions for basic features" },
       { title: "Data security concerns", quote: "Risk of losing important journal entries" },
     ],
-    image: mindScribeImageFile("mind scribe objective.png.png"),
+    image: mindScribeImageFile("mind-scribe-objective-1.png"),
   },
   ideationProcess: {
     heading:
@@ -124,8 +127,8 @@ export const mindScribeModalData: MindScribeModalData = {
       { title: "Wireframes", description: "Low and high-fidelity prototypes" },
       { title: "Testing", description: "Usability testing and iteration" },
     ],
-    ideationImage: mindScribeImageFile("mind scribe ideation+design process 1.png.png"),
-    designProcessImage: mindScribeImageFile("mind scribe ideation+design process 2.png.png"),
+    ideationImage: mindScribeImageFile("mind-scribe-objective-2.png"),
+    designProcessImage: mindScribeImageFile("mind-scribe-objective-1.png"),
   },
   finalDesigns: {
     heading:
@@ -136,8 +139,25 @@ export const mindScribeModalData: MindScribeModalData = {
   },
   reflections: {
     heading: "This experience strengthened my design and leadership abilities.",
-    body:
-      "Although the project spanned five months, it was a great learning experience and my first time designing an app. I learned how to interpret user feedback and design a solution with intention and clarity. Moving forward, I'd like to spend more time in the research phase, conducting additional surveys and interviews to further refine the app's features and ensure that it solves the issues I set out to address. Additionally, an overwhelming amount of users expressed their preference for pen-and-paper journaling. In revisiting this project, I would like to add a camera feature for scanning paper journals to store and keep track of physical entries. This project has equipped me with valuable skills and insights that I'm eager to apply to future designs. Ultimately, I hope to revisit Mind Scribe in the future, transforming it from a design concept into a fully developed product that can truly benefit users.",
+    body: "This was my first time designing an app, and it taught me how to turn user feedback into a clear design solution.",
+    cards: [
+      {
+        title: "First app design",
+        description: "Learned to interpret user feedback and design with intention and clarity.",
+      },
+      {
+        title: "Deeper research",
+        description: "Next time I would run more surveys and interviews before refining features.",
+      },
+      {
+        title: "Paper-to-digital bridge",
+        description: "Most respondents prefer pen and paper, so I would add a camera feature for scanning paper journals.",
+      },
+      {
+        title: "Next step",
+        description: "Take Mind Scribe from a design concept to a fully developed product.",
+      },
+    ],
   },
   projectedImpact: {
     heading: "Here's how it's projected to impact the market.",

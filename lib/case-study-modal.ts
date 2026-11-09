@@ -17,7 +17,7 @@ export type CaseStudyModalData = {
     image?: string;
     images?: string[];
   };
-  userFeedback?: { heading: string; body: string };
+  userFeedback?: { heading: string; body: string; image?: string };
   objective?: {
     heading: string;
     body: string;
@@ -42,6 +42,7 @@ export type CaseStudyModalData = {
   reflections: {
     heading: string;
     body: string;
+    cards?: { title: string; description: string }[];
     finalDesign2Image?: string;
     userReflectionsImage?: string;
   };
@@ -79,12 +80,6 @@ function mapMindScribeModalData(data: MindScribeModalData): CaseStudyModalData {
       heading: data.ideationProcess.heading,
       body: data.ideationProcess.body,
       featureCards: data.ideationProcess.featureCards,
-      ideationImage: data.ideationProcess.ideationImage,
-      designProcessImage: data.ideationProcess.designProcessImage,
-      postBodyImages: [
-        data.ideationProcess.ideationImage,
-        data.ideationProcess.designProcessImage,
-      ].filter(Boolean),
     },
     finalDesigns: {
       heading: data.finalDesigns.heading,
@@ -169,21 +164,18 @@ const gameLibraryModalData: CaseStudyModalData = {
     ],
     image: gl("game-library-summary-2.png"),
   },
-  process: {
+    process: {
     heading: "Refining the experience through iteration",
     body:
       "I moved from mood boards and style tiles into a more structured component system, then sharpened the layout through responsive breakpoints and visual accessibility checks.",
+    postBodyImages: [gl("game-library-process-1.png")],
     featureCards: [
       { title: "Mood boarding", description: "Explored retro gaming aesthetics and nostalgic UI references." },
       { title: "Style tiles", description: "Defined the palette, typography, and visual system." },
       { title: "Component library", description: "Built reusable interactive patterns for browsing and discovery." },
       { title: "Responsive testing", description: "Adjusted for readability, touch comfort, and layout consistency." },
     ],
-    postBodyImages: [
-      gl("game-library-process-1.png"),
-      gl("game-library-process-2.png"),
-      gl("game-library-process-3.png"),
-    ],
+    image: gl("game-library-process-2.png"),
   },
   finalDesigns: {
     heading: "A polished retro-modern game discovery experience",
@@ -192,10 +184,27 @@ const gameLibraryModalData: CaseStudyModalData = {
     image1: gl("game-library-final-design.png"),
     additionalImages: [gl("game-library-summary-3.png")],
   },
-  reflections: {
-    heading: "What this project reinforced",
-    body:
-      "The project showed that nostalgic design can still feel current when the structure is clear and the interaction patterns are intentional. The strongest work happened when the visual language supported the experience rather than competing with it.",
+    reflections: {
+    heading: "Reflections",
+    body: "Nostalgic design works best as a visual layer on top of a clear structure. The strongest decisions were the ones where the style supported navigation instead of competing with it.",
+    cards: [
+      {
+        title: "Structure first",
+        description: "The retro styling worked best when it sat on top of a clear hierarchy and consistent spacing.",
+      },
+      {
+        title: "Style that supports navigation",
+        description: "The strongest decisions helped users find games, instead of competing with the content.",
+      },
+      {
+        title: "Usability testing",
+        description: "With more time, I would test finding a game by genre and measure task success and time on task.",
+      },
+      {
+        title: "Accessibility follow-up",
+        description: "I would re-check color contrast and spacing against WCAG before calling the design finished.",
+      },
+    ],
   },
   projectedImpact: {
     heading: "Projected impact",
