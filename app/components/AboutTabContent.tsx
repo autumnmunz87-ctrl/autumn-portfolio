@@ -5,23 +5,8 @@ import SocialButtons from "@/app/components/SocialButtons";
 export default function AboutTabContent() {
   return (
     <div className="relative min-h-screen bg-primary-white text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10">
-        <div
-          className="absolute -top-1/2 -right-1/4 h-[80vh] w-[80vh] rounded-full opacity-40 blur-[100px]"
-          style={{
-            background: "radial-gradient(circle, var(--accent-orange) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          className="absolute -bottom-1/4 -left-1/4 h-[60vh] w-[60vh] rounded-full opacity-30 blur-[80px]"
-          style={{
-            background: "radial-gradient(circle, var(--accent-orange) 0%, transparent 70%)",
-          }}
-        />
-      </div>
-
       <PageLayout>
-        <section className="py-20 min-[809px]:py-28">
+        <section className="pt-10 pb-20 min-[809px]:pt-10 min-[809px]:pb-28">
           <div className="grid gap-14 min-[809px]:grid-cols-2 min-[809px]:items-center min-[809px]:gap-20">
             <div>
               <h1 className="hero-title mb-6 min-[809px]:text-[24px] min-[1201px]:text-[24px]">

@@ -209,7 +209,14 @@ body.case-study-open header {
 }
 
 .section-navigation {
-  margin-top: 40px;
+  margin-top: 0;
+}
+
+.section-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
 }
 
 /* Two-column layout: sticky left sidebar + scrollable right content */
@@ -369,7 +376,7 @@ body.case-study-open header {
 }
 
 .section-nav-link {
-  line-height: 1.5;
+  line-height: 1.4;
   padding: 0;
   margin: 0;
 }

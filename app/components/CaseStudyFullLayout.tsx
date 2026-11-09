@@ -98,8 +98,8 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
             </div>
           )}
           {/* GROUP 3: Section navigation */}
-          <div className="section-navigation mt-8">
-            <nav aria-label="Section navigation" className="flex flex-col gap-7">
+          <div className="section-navigation">
+            <nav aria-label="Section navigation" className="section-nav">
               {SECTION_NAV.map((item) => (
                 <button
                   key={item.id}
