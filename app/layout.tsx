@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Nav from "./components/Nav";
+import Minymon from "./components/Minymon";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -11,7 +12,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Autumn Munz | UX & Product Design Portfolio",
-  description: "UX designer passionate about interface design and functionality.",
+  description:
+    "UX designer passionate about interface design and functionality.",
   icons: {
     icon: "/icons/initial-icon.png?v=2",
     shortcut: "/icons/initial-icon.png?v=2",
@@ -29,6 +31,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} antialiased`}>
         <Nav />
         {children}
+        <Minymon />
       </body>
     </html>
   );

@@ -47,16 +47,48 @@ function GameLibraryImageFile(filename: string): string {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "fintech",
-    title: "Fintech",
-    subtitle: "Coming soon",
-    // TODO: Replace with final Fintech case study description when details are ready.
+    slug: "mind-scribe",
+    title: "Mind Scribe",
+    subtitle: "Journaling & wellness platform",
     description:
-      "A fintech product that reimagines personal finance through intuitive design.",
-    image: "/images%20fintech/fintech%20hero%20image.png",
-    href: "/work/fintech",
-    // TODO: Set to false and complete case study fields when Fintech case study is complete.
-    comingSoon: true,
+      "Journaling and wellness app concept built from a 12-person survey, competitor review, and published research.",
+    intro:
+      "A journaling and wellness app concept designed for people who want to reflect but have not stuck with an app. This case study covers the research, the design process, and what the data suggests about the market.",
+    image: "/images%20mind%20scribe/mind%20scribe%20hero.png.png",
+    href: "/work/mind-scribe",
+    tags: ["UI/UX", "Prototyping", "Research"],
+    role: "UX Designer & Researcher",
+    team: "Solo",
+    duration: "[Confirm dates]",
+    tools: "Figma, Miro, Google Forms",
+    insights: [
+      { heading: "Context", body: "11 of 12 survey respondents journal on paper, and only 1 currently uses a journaling app." },
+      { heading: "Challenge", body: "6 of 12 had stopped using a journaling app, citing crowded interfaces, ads and paywalls, and notifications." },
+      { heading: "Solution", body: "A customizable, uncluttered app with themes and guided prompts that make starting an entry easy." },
+    ],
+    dataBlock: {
+      uiImage: "/placeholder-mindscribe.svg",
+      chartImage: "/placeholder-mindscribe.svg",
+    },
+    designArtifacts: [
+      "/placeholder-mindscribe.svg",
+      "/placeholder-mindscribe.svg",
+    ],
+    context:
+      "Mind Scribe is a journaling and wellness app concept. A 12-person survey found that 11 of 12 respondents use pen and paper and only 1 uses a journaling app.",
+    contextHeading: "Understanding the problem space",
+    challenge:
+      "Half of the people I surveyed had stopped using a journaling app. Their reasons included crowded or unattractive interfaces, ads and paywalls, and notifications, and published data shows mental health apps lose most users within a month (median 30-day retention of 3.3%).",
+    challengeHeading: "Reducing friction for daily journaling",
+    solution:
+      "A customizable, uncluttered app with themes, mood check-ins, and guided prompts such as Morning Pages and Evening Reflection. 9 of 12 respondents listed customization among their top three features.",
+    solutionHeading: "Customization and guided prompts",
+    process:
+      "Research → personas → wireframes → usability testing → high-fidelity design → iteration based on feedback.",
+    processHeading: "From research to high-fidelity design",
+    impact:
+      "Concept stage, not launched. 8 of 12 survey respondents (67%) would pay for a journaling app, 5 of them in the $2 to $5 per month range. Industry benchmarks suggest real conversion would be far lower, so the next step is testing with a larger sample.",
+    impactHeading: "What the data suggests about the market",
   },
   {
     slug: "game-library",
@@ -104,52 +136,17 @@ export const caseStudies: CaseStudy[] = [
       "Mood boarding → style tiles → component library → responsive breakpoints → accessibility audit.",
     impact: "Positive feedback on both aesthetic appeal and ease of use.",
   },
-    // Replace the existing { slug: "mind-scribe", ... } object inside the caseStudies array
-// in case-studies.ts with this one. Image paths and tags are unchanged.
-// TODO: set `duration` once you confirm the real project dates.
   {
-    slug: "mind-scribe",
-    title: "Mind Scribe",
-    subtitle: "Journaling & wellness platform",
+    slug: "fintech",
+    title: "Fintech",
+    subtitle: "Coming soon",
+    // TODO: Replace with final Fintech case study description when details are ready.
     description:
-      "Journaling and wellness app concept built from a 12-person survey, competitor review, and published research.",
-    intro:
-      "A journaling and wellness app concept designed for people who want to reflect but have not stuck with an app. This case study covers the research, the design process, and what the data suggests about the market.",
-    image: "/images%20mind%20scribe/mind%20scribe%20hero.png.png",
-    href: "/work/mind-scribe",
-    tags: ["UI/UX", "Prototyping", "Research"],
-    role: "UX Designer & Researcher",
-    team: "Solo",
-    duration: "[Confirm dates]",
-    tools: "Figma, Miro, Google Forms",
-    insights: [
-      { heading: "Context", body: "11 of 12 survey respondents journal on paper, and only 1 currently uses a journaling app." },
-      { heading: "Challenge", body: "6 of 12 had stopped using a journaling app, citing crowded interfaces, ads and paywalls, and notifications." },
-      { heading: "Solution", body: "A customizable, uncluttered app with themes and guided prompts that make starting an entry easy." },
-    ],
-    dataBlock: {
-      uiImage: "/placeholder-mindscribe.svg",
-      chartImage: "/placeholder-mindscribe.svg",
-    },
-    designArtifacts: [
-      "/placeholder-mindscribe.svg",
-      "/placeholder-mindscribe.svg",
-    ],
-    context:
-      "Mind Scribe is a journaling and wellness app concept. A 12-person survey found that 11 of 12 respondents use pen and paper and only 1 uses a journaling app.",
-    contextHeading: "Understanding the problem space",
-    challenge:
-      "Half of the people I surveyed had stopped using a journaling app. Their reasons included crowded or unattractive interfaces, ads and paywalls, and notifications, and published data shows mental health apps lose most users within a month (median 30-day retention of 3.3%).",
-    challengeHeading: "Reducing friction for daily journaling",
-    solution:
-      "A customizable, uncluttered app with themes, mood check-ins, and guided prompts such as Morning Pages and Evening Reflection. 9 of 12 respondents listed customization among their top three features.",
-    solutionHeading: "Customization and guided prompts",
-    process:
-      "Research → personas → wireframes → usability testing → high-fidelity design → iteration based on feedback.",
-    processHeading: "From research to high-fidelity design",
-    impact:
-      "Concept stage, not launched. 8 of 12 survey respondents (67%) would pay for a journaling app, 5 of them in the $2 to $5 per month range. Industry benchmarks suggest real conversion would be far lower, so the next step is testing with a larger sample.",
-    impactHeading: "What the data suggests about the market",
+      "A fintech product that reimagines personal finance through intuitive design.",
+    image: "/images%20fintech/fintech%20hero%20image.png",
+    href: "/work/fintech",
+    // TODO: Set to false and complete case study fields when Fintech case study is complete.
+    comingSoon: true,
   },
 ];
 

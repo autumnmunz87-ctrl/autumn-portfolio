@@ -405,6 +405,29 @@ body.case-study-open header {
   }
 }
 
+.footer-logo > div {
+  background-color: #fff;
+  transition: background-color 200ms ease;
+}
+.footer-logo.group:hover > div {
+  background-color: #302f2b;
+}
+
+.footer-social-buttons a {
+  background-color: #fff !important;
+  color: var(--accent-orange) !important;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.footer-social-buttons a:hover {
+  background-color: #fff !important;
+  opacity: 0.88;
+  transform: scale(1.04);
+}
+.footer-social-buttons img {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(69%) saturate(1547%)
+    hue-rotate(326deg) brightness(102%) contrast(101%) !important;
+}
+
 /* Container max-width only (no padding) - for modals, etc. */
 .container-section-width {
   width: 100%;

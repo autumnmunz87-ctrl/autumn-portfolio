@@ -22,12 +22,16 @@ const valueCards = [
   { title: "People first", body: "I put people first, whether I'm serving a client, welcoming a visitor, or designing for someone's needs." },
 ];
 
-const enjoysColumns = [
-  ["reading", "my cat"],
-  ["cocteau twins", "poke bowls"],
-  ["MMORPG games", "maple cinnamon lattes"],
-  ["binging a good tv show"],
+const enjoysItems = [
+  "reading",
+  "my cat",
+  "cocteau twins",
+  "poke bowls",
+  "MMORPG games",
+  "maple cinnamon lattes",
+  "binging a good tv show",
 ];
+const enjoysBackgroundOpacities = [0.2, 0.3, 0.4] as const;
 
 export default function AboutTabContent() {
   const [activeSection, setActiveSection] = useState("hi");
@@ -144,19 +148,22 @@ export default function AboutTabContent() {
             </section>
 
             <section id="enjoys" className="mt-[48px] scroll-mt-28">
-              <p className="mb-6 text-[14px] font-normal uppercase tracking-[0.04em] text-primary-black/60">
+              <p className="mb-4 text-[14px] font-normal uppercase tracking-[0.04em] text-primary-black/60">
                 ENJOYS
               </p>
-              <div className="rounded-[16px] bg-[var(--card-bg)] p-6 md:p-8">
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
-                  {enjoysColumns.map((group, index) => (
-                    <div key={index} className="flex flex-col gap-2 text-[18px] leading-7 text-primary-black">
-                      {group.map((line) => (
-                        <span key={line}>{line}</span>
-                      ))}
-                    </div>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-3">
+                {enjoysItems.map((item, index) => (
+                  <span
+                    key={item}
+                    className="inline-flex cursor-default items-center gap-[10px] rounded-full py-2 pl-4 pr-[18px] text-[18px] leading-7 text-primary-black"
+                    style={{
+                      backgroundColor: `rgba(255, 136, 81, ${enjoysBackgroundOpacities[index % enjoysBackgroundOpacities.length]})`,
+                    }}
+                  >
+                    <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-[#FF8851]" />
+                    {item}
+                  </span>
+                ))}
               </div>
             </section>
 
@@ -189,4 +196,3 @@ export default function AboutTabContent() {
     </div>
   );
 }
-
