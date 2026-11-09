@@ -64,16 +64,7 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
     <div className="ms-modal-layout flex flex-col min-[809px]:flex-row min-[809px]:items-stretch min-[809px]:gap-12">
       {/* Left column: sticky sidebar – project-info, project-tags, section-navigation */}
       <aside className="ms-modal-sidebar flex flex-col shrink-0 min-[809px]:sticky min-[809px]:top-[100px] min-[809px]:w-64">
-        <div
-          className="ms-modal-container case-study-left flex flex-col"
-          style={
-            isMindScribe
-              ? { height: "933px" }
-              : isGameLibrary
-                ? { height: "812px" }
-                : undefined
-          }
-        >
+        <div className="ms-modal-container case-study-left flex flex-col">
           {/* GROUP 1: Project title and subtitle */}
           <div className="project-info">
             <h1 className="ms-modal-heading font-bold">{study.title}</h1>
@@ -107,33 +98,14 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
             </div>
           )}
           {/* GROUP 3: Section navigation */}
-          <div
-            className="section-navigation"
-            style={
-              isMindScribe
-                ? { height: "645px" }
-                : isGameLibrary
-                  ? { height: "631px" }
-                  : undefined
-            }
-          >
-            <nav
-              aria-label="Section navigation"
-              className="flex flex-col gap-2"
-              style={
-                isMindScribe
-                  ? { marginTop: "300px", marginBottom: "30px" }
-                  : isGameLibrary
-                    ? { marginTop: "300px", marginBottom: "30px" }
-                    : undefined
-              }
-            >
+          <div className="section-navigation mt-8">
+            <nav aria-label="Section navigation" className="flex flex-col gap-7">
               {SECTION_NAV.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.id)}
-                  className="ms-modal-card-desc text-left hover:text-primary-black transition-colors py-1"
+                  className="section-nav-link ms-modal-card-desc text-left hover:text-primary-black transition-colors"
                 >
                   {item.label}
                 </button>

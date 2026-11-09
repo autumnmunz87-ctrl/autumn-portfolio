@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const email = "autumn.munz87@gmail.com";
@@ -9,9 +10,18 @@ export default function SocialButtons() {
     <div className="flex items-center gap-3">
       <Link
         href={`mailto:${email}`}
-        className="text-body-regular text-[#808080] underline transition-colors hover:text-foreground"
+        aria-label="Email"
+        className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-accent-orange text-primary-white transition-colors duration-300 hover:bg-accent-orange/90"
       >
-        Email
+        <Image
+          src="/icons/envelope-regular-full.svg"
+          alt=""
+          width={18}
+          height={18}
+          aria-hidden="true"
+          className="h-4 w-4"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
       </Link>
       <Link
         href={linkedinUrl}

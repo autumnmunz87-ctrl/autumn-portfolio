@@ -74,6 +74,10 @@ body {
   font-family: var(--font-poppins), system-ui, sans-serif;
 }
 
+body.case-study-open header {
+  display: none !important;
+}
+
 /* Global container - used by navbar and all major sections */
 /* Mobile/Tablet: 90% | Desktop: max 1200px | Large Desktop: max 1440px */
 .container {
@@ -362,6 +366,12 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: var(--primary-black-secondary);
+}
+
+.section-nav-link {
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
 }
 
 /* Navbar: sticky, consistent spacing */
