@@ -98,6 +98,16 @@ export default function AboutTabContent() {
           <div className="col-span-12 lg:col-span-10">
             <section id="hi" className="scroll-mt-28">
               <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+                <div className="relative w-full max-w-[280px] justify-self-start overflow-hidden rounded-[24px] bg-primary-black/10 min-[393px]:max-w-[400px] min-[809px]:max-w-[544px]" style={{ aspectRatio: "544/560" }}>
+                  <Image
+                    src={photoPaths.hi}
+                    alt="Autumn Munz portrait"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 392px) 280px, (max-width: 808px) 400px, 544px"
+                  />
+                </div>
+
                 <div className="flex flex-col justify-center">
                   <h1 className="hero-title mb-6 min-[809px]:text-[24px] min-[1201px]:text-[24px]">
                     I&apos;m Autumn, I like to design things that bring people closer.
@@ -108,16 +118,6 @@ export default function AboutTabContent() {
                   <p className="about-bio leading-relaxed mt-6">
                     When I&apos;m not designing, you&apos;ll probably find me reading with a cup of coffee in hand, or pouring endless hours into my newest gaming hyperfixation.
                   </p>
-                </div>
-
-                <div className="relative w-full max-w-[280px] justify-self-end overflow-hidden rounded-[24px] bg-primary-black/10 min-[393px]:max-w-[400px] min-[809px]:max-w-[544px]" style={{ aspectRatio: "544/560" }}>
-                  <Image
-                    src={photoPaths.hi}
-                    alt="Autumn Munz portrait"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 392px) 280px, (max-width: 808px) 400px, 544px"
-                  />
                 </div>
               </div>
             </section>
