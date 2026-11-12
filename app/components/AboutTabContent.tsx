@@ -17,9 +17,9 @@ const photoPaths = {
 } as const;
 
 const valueCards = [
-  { title: "Curiosity", body: "I love learning how things work, and I teach myself what I don't know yet." },
-  { title: "Thoughtful craft", body: "I take the time to get the details right, so what I make is clear, accurate, and easy to use." },
-  { title: "People first", body: "I put people first, whether I'm serving a client, welcoming a visitor, or designing for someone's needs." },
+  { title: "Curiosity", body: "I love learning how things work, and I teach myself what I don't know yet.", icon: "/icons/question-icon.svg" },
+  { title: "Thoughtful craft", body: "I take the time to get the details right, so what I make is clear, accurate, and easy to use.", icon: "/icons/bulb-icon.svg" },
+  { title: "People first", body: "I put people first, whether I'm serving a client, welcoming a visitor, or designing for someone's needs.", icon: "/icons/face-icon.svg" },
 ];
 
 const enjoysItems = [
@@ -126,27 +126,6 @@ export default function AboutTabContent() {
               </div>
             </section>
 
-            <section id="values" className="mt-[48px] scroll-mt-28">
-              <p className="mb-6 text-[14px] font-normal uppercase tracking-[0.04em] text-primary-black/60">
-                MY CORE VALUES
-              </p>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                {valueCards.map((card) => (
-                  <article
-                    key={card.title}
-                    className="rounded-[16px] bg-[var(--card-bg)] p-6"
-                    aria-label={card.title}
-                  >
-                    <div className="mb-4 text-[20px] leading-none text-primary-black">✱</div>
-                    <div className="text-primary-black">
-                      <p className="mb-2 text-[20px] font-medium leading-7">{card.title}</p>
-                      <p className="card-title text-[16px] leading-6 text-primary-black">{card.body}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-
             <section id="enjoys" className="mt-[48px] scroll-mt-28">
               <p className="mb-4 text-[14px] font-normal uppercase tracking-[0.04em] text-primary-black/60">
                 ENJOYS
@@ -163,6 +142,29 @@ export default function AboutTabContent() {
                     <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-[#FF8851]" />
                     {item}
                   </span>
+                ))}
+              </div>
+            </section>
+
+            <section id="values" className="mt-[48px] scroll-mt-28">
+              <p className="mb-6 text-[14px] font-normal uppercase tracking-[0.04em] text-primary-black/60">
+                MY CORE VALUES
+              </p>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                {valueCards.map((card) => (
+                  <article
+                    key={card.title}
+                    className="rounded-[16px] bg-[var(--card-bg)] p-6"
+                    aria-label={card.title}
+                  >
+                    <div className="mb-4">
+                      <Image src={card.icon} alt="" width={28} height={28} />
+                    </div>
+                    <div className="text-primary-black">
+                      <p className="mb-2 text-[20px] font-medium leading-7">{card.title}</p>
+                      <p className="card-title text-[16px] leading-6 text-primary-black">{card.body}</p>
+                    </div>
+                  </article>
                 ))}
               </div>
             </section>

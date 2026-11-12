@@ -415,7 +415,7 @@ body.case-study-open header {
 
 .footer-social-buttons a {
   background-color: #fff !important;
-  color: var(--accent-orange) !important;
+  color: #FF8851 !important;
   transition: opacity 200ms ease, transform 200ms ease;
 }
 .footer-social-buttons a:hover {

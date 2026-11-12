@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="footer-full-bleed w-full bg-[var(--accent-orange)] py-16 text-white">
+    <footer className="footer-full-bleed mt-[80px] w-full bg-[#FF9F74] py-16 text-white md:mt-[120px]">
       <div className="page-shell">
         <div className="flex flex-col items-center gap-8 text-center">
           <Link
@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="#top"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[16px] leading-none text-accent-orange transition-opacity hover:opacity-80"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[16px] leading-none text-[#FF8851] transition-opacity hover:opacity-80"
               aria-label="Back to top"
             >
               <span>Back to top</span>

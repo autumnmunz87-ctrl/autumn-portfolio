@@ -59,8 +59,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["UI/UX", "Prototyping", "Research"],
     role: "UX Designer & Researcher",
     team: "Solo",
-    duration: "[Confirm dates]",
-    tools: "Figma, Miro, Google Forms",
+    duration: "February 2024 - May 2024",
+    tools: "Figma, Google Forms",
     insights: [
       { heading: "Context", body: "11 of 12 survey respondents journal on paper, and only 1 currently uses a journaling app." },
       { heading: "Challenge", body: "6 of 12 had stopped using a journaling app, citing crowded interfaces, ads and paywalls, and notifications." },
@@ -137,15 +137,15 @@ export const caseStudies: CaseStudy[] = [
     impact: "Positive feedback on both aesthetic appeal and ease of use.",
   },
   {
-    slug: "fintech",
-    title: "Fintech",
+    slug: "finneo",
+    title: "FinNeo",
     subtitle: "Coming soon",
-    // TODO: Replace with final Fintech case study description when details are ready.
+    // TODO: Replace with final FinNeo case study description when details are ready.
     description:
       "A fintech product that reimagines personal finance through intuitive design.",
-    image: "/images%20fintech/fintech%20hero%20image.png",
-    href: "/work/fintech",
-    // TODO: Set to false and complete case study fields when Fintech case study is complete.
+    image: "/images%20finneo/FinNeo-hero-image.png",
+    href: "/work/finneo",
+    // TODO: Set to false and complete case study fields when FinNeo case study is complete.
     comingSoon: true,
   },
 ];

@@ -12,7 +12,7 @@ export default function CaseStudyCard({ study, onClick }: CaseStudyCardProps) {
   const isComingSoon = study.comingSoon === true;
   const COMING_SOON_LABEL = "Coming soon";
   const cardClickHandler = isComingSoon ? undefined : onClick;
-  const year = study.slug === "fintech" ? "2025" : "2024";
+  const year = study.slug === "finneo" ? "2026" : "2024";
 
   const comingSoonBadgeClasses =
     "absolute right-3 top-3 z-20 rounded-md bg-primary-black/80 px-3 py-1 text-xs font-medium uppercase tracking-wide text-primary-white";
