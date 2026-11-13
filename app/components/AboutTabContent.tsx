@@ -31,7 +31,11 @@ const enjoysItems = [
   "maple cinnamon lattes",
   "binging a good tv show",
 ];
-const enjoysBackgroundOpacities = [0.2, 0.3, 0.4] as const;
+const valueCardBackgrounds = [
+  "rgba(255, 136, 81, 0.20)",
+  "rgba(255, 136, 81, 0.30)",
+  "rgba(255, 136, 81, 0.40)",
+] as const;
 
 export default function AboutTabContent() {
   const [activeSection, setActiveSection] = useState("hi");
@@ -131,13 +135,10 @@ export default function AboutTabContent() {
                 ENJOYS
               </p>
               <div className="flex flex-wrap gap-3">
-                {enjoysItems.map((item, index) => (
+                {enjoysItems.map((item) => (
                   <span
                     key={item}
-                    className="inline-flex cursor-default items-center gap-[10px] rounded-full py-2 pl-4 pr-[18px] text-[18px] leading-7 text-primary-black"
-                    style={{
-                      backgroundColor: `rgba(255, 136, 81, ${enjoysBackgroundOpacities[index % enjoysBackgroundOpacities.length]})`,
-                    }}
+                    className="inline-flex cursor-default items-center gap-[10px] rounded-full border-[1.5px] border-[#FF8851] bg-[#FFFFFF] py-2 pl-4 pr-[18px] text-[18px] leading-7 text-[#302F2B]"
                   >
                     <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-[#FF8851]" />
                     {item}
@@ -151,14 +152,28 @@ export default function AboutTabContent() {
                 MY CORE VALUES
               </p>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                {valueCards.map((card) => (
+                {valueCards.map((card, index) => (
                   <article
                     key={card.title}
-                    className="rounded-[16px] bg-[var(--card-bg)] p-6"
+                    className="rounded-[16px] p-6"
+                    style={{ backgroundColor: valueCardBackgrounds[index] }}
                     aria-label={card.title}
                   >
                     <div className="mb-4">
-                      <Image src={card.icon} alt="" width={28} height={28} />
+                      <span
+                        aria-hidden="true"
+                        className="block h-7 w-7 bg-[#D9561A]"
+                        style={{
+                          maskImage: `url('${card.icon}')`,
+                          maskRepeat: "no-repeat",
+                          maskPosition: "center",
+                          maskSize: "contain",
+                          WebkitMaskImage: `url('${card.icon}')`,
+                          WebkitMaskRepeat: "no-repeat",
+                          WebkitMaskPosition: "center",
+                          WebkitMaskSize: "contain",
+                        }}
+                      />
                     </div>
                     <div className="text-primary-black">
                       <p className="mb-2 text-[20px] font-medium leading-7">{card.title}</p>

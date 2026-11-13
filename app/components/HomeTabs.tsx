@@ -9,7 +9,7 @@ import { caseStudies } from "@/lib/case-studies";
 const tabs = [
   { key: "work", href: "/?tab=work", label: "Work" },
   { key: "about", href: "/?tab=about", label: "About" },
-  { key: "resume", href: "/resume", label: "Resume" },
+  { key: "resume", href: "/autumn-munz-resume.pdf", label: "Resume" },
 ] as const;
 
 export default function HomeTabs() {
@@ -25,6 +25,20 @@ export default function HomeTabs() {
             const tabClasses = isActive
               ? "rounded-full bg-[rgba(48,47,43,0.06)] px-4 py-2 text-sm text-primary-black"
               : "rounded-full px-4 py-2 text-sm text-foreground-muted transition-colors hover:text-primary-black";
+
+            if (tab.key === "resume") {
+              return (
+                <a
+                  key={tab.key}
+                  href={tab.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={tabClasses}
+                >
+                  {tab.label}
+                </a>
+              );
+            }
 
             return (
               <Link

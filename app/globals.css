@@ -190,7 +190,7 @@ body.case-study-open header {
 .project-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .project-info h1 {
@@ -198,11 +198,11 @@ body.case-study-open header {
 }
 
 .project-tags {
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .section-navigation {
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 .section-nav {
