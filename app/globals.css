@@ -214,6 +214,8 @@ body.case-study-open header {
 
 /* Two-column layout: sticky left sidebar + scrollable right content */
 .ms-modal-sidebar {
+  display: flex;
+  flex-direction: column;
   align-self: start;
 }
 
@@ -224,6 +226,16 @@ body.case-study-open header {
     height: 100vh;
     overflow-y: auto;
     align-self: start;
+  }
+
+  .ms-modal-sidebar > .case-study-left {
+    height: 100%;
+  }
+
+  .ms-modal-sidebar .section-navigation {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-bottom: 32px;
   }
 }
 
@@ -369,9 +381,56 @@ body.case-study-open header {
 }
 
 .section-nav-link {
+  position: relative;
   line-height: 1.4;
   padding: 0;
   margin: 0;
+  cursor: pointer;
+}
+
+.section-nav-link::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF8851;
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+}
+
+.section-nav-link:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid #FF8851;
+  outline-offset: 3px;
+}
+
+.section-nav-link:hover,
+.section-nav-link:focus-visible {
+  color: #302F2B;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-nav-link {
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .section-nav-link::before {
+    transform: translate(-6px, -50%);
+    transition: opacity 0.2s ease;
+  }
+
+  .section-nav-link:hover,
+  .section-nav-link:focus-visible {
+    transform: translateX(6px);
+  }
+
+  .section-nav-link:hover::before,
+  .section-nav-link:focus-visible::before {
+    opacity: 1;
+  }
 }
 
 /* Navbar: sticky, consistent spacing */

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import SocialButtons from "@/app/components/SocialButtons";
 
 const sectionNavItems = [
-  { id: "hi", label: "Hi!" },
+  { id: "hi", label: "Hello" },
   { id: "values", label: "Values" },
   { id: "enjoys", label: "Enjoys" },
   { id: "contact", label: "Contact" },
@@ -27,7 +27,7 @@ const enjoysItems = [
   "my cat",
   "cocteau twins",
   "poke bowls",
-  "MMORPG games",
+  "open-world games",
   "maple cinnamon lattes",
   "binging a good tv show",
 ];

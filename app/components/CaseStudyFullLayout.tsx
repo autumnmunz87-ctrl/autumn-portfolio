@@ -105,7 +105,7 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.id)}
-                  className="section-nav-link ms-modal-card-desc text-left hover:text-primary-black transition-colors"
+                  className="section-nav-link ms-modal-card-desc text-left"
                 >
                   {item.label}
                 </button>
