@@ -10,25 +10,36 @@ export default function Footer() {
     <footer className="footer-full-bleed mt-[80px] w-full bg-[#FF9F74] py-10 text-white md:mt-[120px] md:py-12">
       <div className="page-shell">
         <div className="border-t border-white/30 pt-8">
-          <div className="grid gap-10 md:grid-cols-2 md:items-start">
-            <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-3">
+            <div className="flex justify-center md:justify-start">
               <Link
                 href="/"
-                className="footer-logo group inline-flex items-center gap-3"
+                className="footer-logo group inline-flex shrink-0"
                 aria-label="Autumn - Home"
               >
-                <Logo className="h-[48px] w-[49px]" />
-                <span
-                  className="text-[24px] leading-tight text-white"
-                  style={{ fontFamily: "var(--font-poppins), system-ui, sans-serif" }}
-                >
-                  Autumn Munz
-                </span>
+                <Logo className="h-12 w-[49px]" />
               </Link>
-              <p className="mt-3 text-[14px] text-white/70">
-                UX/UI designer &amp; data analytics student
-              </p>
             </div>
+
+            <nav
+              aria-label="Footer navigation"
+              className="flex flex-col items-center gap-3 text-[16px] text-white"
+            >
+              <Link href="/" className="transition-opacity hover:opacity-80">
+                Work
+              </Link>
+              <Link href="/?tab=about" className="transition-opacity hover:opacity-80">
+                About
+              </Link>
+              <a
+                href="/autumn-munz-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+              >
+                Resume
+              </a>
+            </nav>
 
             <div className="flex flex-col items-center text-center md:items-end md:text-right">
               <p className="text-[16px] text-white/70">Let&apos;s chat!</p>
