@@ -91,6 +91,74 @@ body.case-study-open header {
   }
 }
 
+@media (max-width: 768px) {
+  body:has(.about-page-content) header .page-shell,
+  body:has(.about-page-content) .main-content-shell {
+    padding-inline: 20px;
+  }
+
+  .about-page-content,
+  .about-page-content *,
+  .about-page-content *::before,
+  .about-page-content *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .about-page-content {
+    min-width: 0;
+  }
+
+  .about-page-shell {
+    max-width: 100%;
+    min-width: 0;
+    padding-inline: 0;
+  }
+
+  .about-layout-grid > *,
+  .about-intro-grid > *,
+  .about-value-grid > * {
+    min-width: 0;
+  }
+
+  .about-portrait {
+    max-width: 100%;
+  }
+
+  .about-page-content .hero-title {
+    font-size: clamp(28px, 8vw, 32px);
+    line-height: 1.2;
+  }
+
+  .about-page-content .about-bio {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+body:has(.about-page-content) #top {
+  min-height: 0;
+}
+
+body:has(.about-page-content) .main-page-root {
+  min-height: 0;
+}
+
+body:has(.about-page-content) .main-page-content,
+body:has(.about-page-content) .home-tabs-content {
+  padding-bottom: 0;
+}
+
+body:has(.about-page-content) #top > footer {
+  margin-top: 96px;
+}
+
+@media (max-width: 767px) {
+  body:has(.about-page-content) #top > footer {
+    margin-top: 64px;
+  }
+}
+
 /* Hero section - spacing below navbar */
 .hero {
   margin-top: 120px;

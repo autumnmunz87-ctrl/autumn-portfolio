@@ -4,8 +4,8 @@ import Hero from "../components/Hero";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
-      <div className="pointer-events-none fixed inset-0 -z-10">
+    <div className="main-page-root relative min-h-screen">
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-x-clip">
         <div
           className="absolute -top-1/2 -right-1/4 h-[80vh] w-[80vh] rounded-full opacity-40 blur-[100px]"
           style={{
@@ -20,8 +20,8 @@ export default function Home() {
         />
       </div>
 
-      <div className="page-shell">
-        <div className="flex flex-col pb-20">
+      <div className="page-shell main-content-shell">
+        <div className="main-page-content flex flex-col pb-20">
           <Hero />
           <Suspense fallback={null}>
             <HomeTabs />

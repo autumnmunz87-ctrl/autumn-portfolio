@@ -22,7 +22,7 @@ const valueCards = [
 const enjoysItems = [
   "reading",
   "my cat",
-  "cocteau twins",
+  "discovering new music",
   "poke bowls",
   "open-world games",
   "maple cinnamon lattes",
@@ -75,9 +75,9 @@ export default function AboutTabContent() {
   };
 
   return (
-    <div className="relative min-h-screen text-foreground">
-      <div className="page-shell">
-        <div className="grid grid-cols-12 gap-x-[48px] gap-y-12 pb-12 pt-10 lg:pt-12">
+    <div className="about-page-content relative text-foreground">
+      <div className="page-shell about-page-shell">
+        <div className="about-layout-grid grid grid-cols-1 gap-y-12 pt-10 lg:grid-cols-12 lg:gap-x-[48px] lg:pt-12">
           <aside className="hidden lg:col-span-2 lg:block">
             <div className="sticky top-[120px] flex flex-col gap-2">
               {sectionNavItems.map((item) => {
@@ -100,10 +100,10 @@ export default function AboutTabContent() {
             </div>
           </aside>
 
-          <div className="col-span-12 lg:col-span-10">
+          <div className="min-w-0 lg:col-span-10">
             <section id="hi" className="scroll-mt-28">
-              <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-                <div className="relative w-full max-w-[280px] justify-self-start overflow-hidden rounded-[24px] bg-primary-black/10 min-[393px]:max-w-[400px] min-[809px]:max-w-[544px]" style={{ aspectRatio: "544/560" }}>
+              <div className="about-intro-grid grid min-w-0 gap-8 lg:grid-cols-2 lg:items-center">
+                <div className="about-portrait relative w-full max-w-[280px] justify-self-start overflow-hidden rounded-[24px] bg-primary-black/10 min-[393px]:max-w-[400px] min-[809px]:max-w-[544px]" style={{ aspectRatio: "544/560" }}>
                   <Image
                     src={photoPaths.hi}
                     alt="Autumn Munz portrait"
@@ -113,7 +113,7 @@ export default function AboutTabContent() {
                   />
                 </div>
 
-                <div className="flex flex-col justify-center">
+                <div className="about-intro-copy flex min-w-0 flex-col justify-center">
                   <h1 className="hero-title mb-6 min-[809px]:text-[24px] min-[1201px]:text-[24px]">
                     I&apos;m Autumn, I like to design things that bring people closer.
                   </h1>
@@ -148,7 +148,7 @@ export default function AboutTabContent() {
               <p className="mb-6 text-[14px] font-normal uppercase tracking-[0.04em] text-primary-black/60">
                 MY CORE VALUES
               </p>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              <div className="about-value-grid grid grid-cols-1 gap-6 min-[769px]:grid-cols-3">
                 {valueCards.map((card, index) => (
                   <article
                     key={card.title}

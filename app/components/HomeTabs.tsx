@@ -54,7 +54,7 @@ export default function HomeTabs() {
         </div>
       </div>
 
-      <div className="mt-8 w-full pb-24">
+      <div className="home-tabs-content mt-8 w-full pb-24">
         {activeTab === "about" ? (
           <AboutTabContent />
         ) : (

@@ -19,21 +19,21 @@ export default function Footer() {
               className="footer-logo group inline-flex shrink-0"
               aria-label="Home"
             >
-              <Logo className="h-10 w-[41px]" />
+              <Logo className="h-[52px] w-[53px] md:h-16 md:w-[66px]" />
             </Link>
-            <h2 className="mt-6 text-[32px] leading-tight text-white">
+            <h2 className="mt-6 text-[22px] leading-tight text-white md:text-[26px]">
               Thanks for stopping by.
             </h2>
             <p className="mt-3 text-[16px] text-white/80">
               There&apos;s always a fresh pour of ideas here. Come back anytime.
             </p>
-            <p className="mt-6 text-[14px] text-white/70">© 2026</p>
+            <p className="mt-6 text-[14px] text-white/70">© Autumn Munz, 2025</p>
           </div>
 
           <div className="grid grid-cols-2 gap-10 md:gap-16">
-            <nav aria-label="Find me" className="flex flex-col items-start gap-3">
+            <nav aria-label="Contact" className="flex flex-col items-start gap-3">
               <h3 className="mb-1 text-[14px] font-medium uppercase tracking-[0.08em] text-white">
-                Find me
+                Contact
               </h3>
               <a href={`mailto:${email}`} className={footerLinkClassName}>
                 Email
