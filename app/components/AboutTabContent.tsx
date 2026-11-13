@@ -2,18 +2,15 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import SocialButtons from "@/app/components/SocialButtons";
 
 const sectionNavItems = [
   { id: "hi", label: "Hello" },
   { id: "values", label: "Values" },
   { id: "enjoys", label: "Enjoys" },
-  { id: "contact", label: "Contact" },
 ] as const;
 
 const photoPaths = {
-  hi: "/about-portrait.png",
-  contact: "/about-outdoor.png",
+  hi: "/about-portrait.jpg",
 } as const;
 
 const valueCards = [
@@ -184,29 +181,6 @@ export default function AboutTabContent() {
               </div>
             </section>
 
-            <section id="contact" className="mt-[48px] scroll-mt-28">
-              <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-                <div className="flex flex-col justify-center">
-                  <h2 className="section-title mb-6">
-                    Get to know me
-                  </h2>
-                  <p className="text-body-regular mb-8 leading-relaxed">
-                    Have a project in mind? Or just want to chat about design, gaming, or good coffee? I&apos;d love to hear from you.
-                  </p>
-                  <SocialButtons />
-                </div>
-
-                <div className="relative w-full max-w-[280px] justify-self-end overflow-hidden rounded-[24px] bg-primary-black/10 min-[393px]:max-w-[400px] min-[809px]:max-w-[544px]" style={{ aspectRatio: "544/560" }}>
-                  <Image
-                    src={photoPaths.contact}
-                    alt="Autumn Munz outdoors"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 392px) 280px, (max-width: 808px) 400px, 544px"
-                  />
-                </div>
-              </div>
-            </section>
           </div>
         </div>
       </div>

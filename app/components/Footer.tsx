@@ -1,86 +1,80 @@
-import Image from "next/image";
 import Link from "next/link";
-import SocialButtons from "./SocialButtons";
 import Logo from "./Logo";
 
 const email = "autumn.munz87@gmail.com";
+const linkedinUrl = "https://www.linkedin.com/in/autumn-munz/";
+const behanceUrl = "https://www.behance.net/autumnmunz";
+
+const footerLinkClassName =
+  "text-[14px] uppercase tracking-[0.06em] text-white/80 transition-colors duration-200 hover:text-white hover:underline";
 
 export default function Footer() {
   return (
-    <footer className="footer-full-bleed mt-[80px] w-full bg-[#FF9F74] py-10 text-white md:mt-[120px] md:py-12">
+    <footer className="footer-full-bleed mt-[80px] w-full bg-[#FF9F74] py-16 text-white md:mt-[120px]">
       <div className="page-shell">
-        <div className="border-t border-white/30 pt-8">
-          <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-3">
-            <div className="flex justify-center md:justify-start">
-              <Link
-                href="/"
-                className="footer-logo group inline-flex shrink-0"
-                aria-label="Autumn - Home"
-              >
-                <Logo className="h-12 w-[49px]" />
-              </Link>
-            </div>
-
-            <nav
-              aria-label="Footer navigation"
-              className="flex flex-col items-center gap-3 text-[16px] text-white"
+        <div className="flex flex-col items-start gap-10 md:flex-row md:justify-between md:gap-16">
+          <div className="flex max-w-[520px] flex-col items-start">
+            <Link
+              href="/"
+              className="footer-logo group inline-flex shrink-0"
+              aria-label="Home"
             >
-              <Link href="/" className="transition-opacity hover:opacity-80">
+              <Logo className="h-10 w-[41px]" />
+            </Link>
+            <h2 className="mt-6 text-[32px] leading-tight text-white">
+              Thanks for stopping by.
+            </h2>
+            <p className="mt-3 text-[16px] text-white/80">
+              There&apos;s always a fresh pour of ideas here. Come back anytime.
+            </p>
+            <p className="mt-6 text-[14px] text-white/70">© 2026</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-10 md:gap-16">
+            <nav aria-label="Find me" className="flex flex-col items-start gap-3">
+              <h3 className="mb-1 text-[14px] font-medium uppercase tracking-[0.08em] text-white">
+                Find me
+              </h3>
+              <a href={`mailto:${email}`} className={footerLinkClassName}>
+                Email
+              </a>
+              <a
+                href={linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={footerLinkClassName}
+              >
+                LinkedIn
+              </a>
+              <a
+                href={behanceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={footerLinkClassName}
+              >
+                Behance
+              </a>
+            </nav>
+
+            <nav aria-label="Explore" className="flex flex-col items-start gap-3">
+              <h3 className="mb-1 text-[14px] font-medium uppercase tracking-[0.08em] text-white">
+                Explore
+              </h3>
+              <Link href="/?tab=work" className={footerLinkClassName}>
                 Work
               </Link>
-              <Link href="/?tab=about" className="transition-opacity hover:opacity-80">
+              <Link href="/?tab=about" className={footerLinkClassName}>
                 About
               </Link>
               <a
                 href="/autumn-munz-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-80"
+                className={footerLinkClassName}
               >
                 Resume
               </a>
             </nav>
-
-            <div className="flex flex-col items-center text-center md:items-end md:text-right">
-              <p className="text-[16px] text-white/70">Let&apos;s chat!</p>
-              <a
-                href={`mailto:${email}`}
-                className="mt-1 text-[16px] text-white underline-offset-4 hover:underline"
-              >
-                {email}
-              </a>
-              <div className="footer-social-buttons mt-4">
-                <SocialButtons />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 flex flex-col items-center gap-4 text-center">
-            <p className="text-[18px] leading-tight text-white">
-              Thanks for stopping by. Come again soon.
-            </p>
-            <Link
-              href="#top"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[16px] leading-none text-[#FF8851] transition-opacity hover:opacity-80"
-              aria-label="Back to top"
-            >
-              <span>Back to top</span>
-              <Image
-                src="/icons/arrow-up.svg"
-                alt=""
-                width={18}
-                height={18}
-                aria-hidden="true"
-                className="h-4 w-4"
-                style={{
-                  filter:
-                    "brightness(0) saturate(100%) invert(65%) sepia(69%) saturate(1547%) hue-rotate(326deg) brightness(102%) contrast(101%)",
-                }}
-              />
-            </Link>
-            <p className="text-[12px] text-white/70">
-              Built with Next.js &amp; maple cinnamon lattes.
-            </p>
           </div>
         </div>
       </div>
