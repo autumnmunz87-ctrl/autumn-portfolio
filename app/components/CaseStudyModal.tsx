@@ -48,7 +48,7 @@ export default function CaseStudyModal({ study, onClose }: CaseStudyModalProps) 
 
   const sheetClasses = isFullScreen
     ? "fixed inset-0 z-10 w-full h-full max-w-none max-h-none -translate-x-0 -translate-y-0 rounded-none"
-    : "absolute left-1/2 top-1/2 z-10 w-[85vw] max-w-[1600px] max-h-[calc(100vh-3rem)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[24px]";
+    : "absolute left-1/2 top-1/2 z-10 w-[85vw] max-w-[1600px] max-h-[calc(100vh-3rem)] -translate-x-1/2 -translate-y-1/2 overflow-clip rounded-[24px]";
 
   return (
     <div
@@ -106,7 +106,7 @@ export default function CaseStudyModal({ study, onClose }: CaseStudyModalProps) 
           </button>
         </div>
 
-        <div className={`${isFullScreen ? "h-full" : "max-h-[calc(100vh-3rem)]"} overflow-y-auto scroll-smooth pt-20`}>
+        <div className={`${isFullScreen ? "h-full case-study-fullscreen-scroll" : "max-h-[calc(100vh-3rem)]"} overflow-y-auto scroll-smooth`}>
           <CaseStudyFullLayout slug={study.slug} />
         </div>
       </div>

@@ -290,10 +290,14 @@ body:has(.about-page-content) #top > footer {
 @media (min-width: 809px) {
   .ms-modal-layout > .ms-modal-sidebar {
     position: sticky;
-    top: 24px !important;
-    height: 100vh;
+    top: 0 !important;
+    height: calc(100vh - 3rem);
     overflow-y: auto;
-    align-self: start;
+    align-self: flex-start;
+  }
+
+  .case-study-fullscreen-scroll .ms-modal-sidebar {
+    height: 100dvh;
   }
 
   .ms-modal-sidebar > .case-study-left {

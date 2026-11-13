@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 
 const sectionNavItems = [
   { id: "hi", label: "Hello" },
-  { id: "values", label: "Values" },
   { id: "enjoys", label: "Enjoys" },
+  { id: "values", label: "Values" },
 ] as const;
 
 const photoPaths = {

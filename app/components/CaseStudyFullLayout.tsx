@@ -63,7 +63,7 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
   return (
     <div className="ms-modal-layout flex flex-col min-[809px]:flex-row min-[809px]:items-stretch min-[809px]:gap-12">
       {/* Left column: sticky sidebar – project-info, project-tags, section-navigation */}
-      <aside className="ms-modal-sidebar flex flex-col shrink-0 min-[809px]:sticky min-[809px]:top-[100px] min-[809px]:w-64">
+      <aside className="ms-modal-sidebar flex flex-col shrink-0 pt-20 min-[809px]:w-64">
         <div className="ms-modal-container case-study-left flex flex-col">
           {/* GROUP 1: Project title and subtitle */}
           <div className="project-info">
@@ -116,7 +116,7 @@ export default function CaseStudyFullLayout({ slug }: CaseStudyFullLayoutProps) 
       </aside>
 
       {/* Right column: scrollable content */}
-      <div className="ms-modal-content flex-1 min-w-0">
+      <div className="ms-modal-content flex-1 min-w-0 pt-20">
         <div className="ms-modal-container">
           {/* 1. Cover Image */}
           <section className="ms-modal-section-gap">
