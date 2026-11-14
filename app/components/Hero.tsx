@@ -14,7 +14,7 @@ export default function Hero() {
         Autumn Munz
       </h1>
       <p className="hero-subheader text-subheading-1 leading-relaxed">
-        UX/UI designer and data analytics student turning user insights into better decisions.
+        Turning user insights into thoughtful, accessible design.
       </p>
     </motion.section>
   );

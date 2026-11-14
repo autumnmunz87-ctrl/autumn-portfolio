@@ -184,6 +184,7 @@ export default function AboutTabContent() {
           </div>
         </div>
       </div>
+      <div aria-hidden="true" className="h-[96px] md:h-[128px]" />
     </div>
   );
 }

@@ -11,9 +11,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Autumn Munz | UX & Product Design Portfolio",
+  title: "Autumn Munz | UX Research Portfolio",
   description:
-    "UX designer passionate about interface design and functionality.",
+    "Turning user insights into thoughtful, accessible design.",
   icons: {
     icon: "/icons/initial-icon.png?v=2",
     shortcut: "/icons/initial-icon.png?v=2",
