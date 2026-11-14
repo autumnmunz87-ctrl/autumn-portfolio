@@ -138,7 +138,7 @@ export const mindScribeModalData: MindScribeModalData = {
     image1: mindScribeImageFile("mind scribe final design.svg"),
   },
   reflections: {
-    heading: "This experience strengthened my design and leadership abilities.",
+    heading: "This experience strengthened my capacity to empathize with users and taught me to design with restraint and treat feedback as direction.",
     body: "This was my first time designing an app, and it taught me how to turn user feedback into a clear design solution.",
     cards: [
       {
@@ -162,7 +162,7 @@ export const mindScribeModalData: MindScribeModalData = {
   projectedImpact: {
     heading: "Here's how it's projected to impact the market.",
     bodyParagraph1:
-      "While Mind Scribe has not yet been released as a live product, its projected impact is strongly supported by user research and prototype testing. Survey results indicated that 67% of participants reported they would be willing to pay a subscription between $1–$5 per month after interacting with the prototype. Notably, many of these users also stated that they do not currently use a journaling app, citing dissatisfaction with existing options and a reluctance to pay for subscriptions in the current market.",
+      "While Mind Scribe has not yet been released as a live product, its projected impact is strongly supported by user research and prototype testing. Survey results indicated that nearly 70% of participants reported they would be willing to pay a subscription between $1–$5 per month after interacting with the prototype. Notably, many of these users also stated that they do not currently use a journaling app, citing dissatisfaction with existing options and a reluctance to pay for subscriptions in the current market.",
     bodyParagraph2:
       "These findings suggest that Mind Scribe successfully addresses key usability and experience gaps present in many journaling apps today. By prioritizing clarity, accessibility, and user-centered features, the design demonstrates strong potential to convert non-users into paying customers. If launched, Mind Scribe is expected to improve perceived value, increase adoption among previously disengaged users, and support sustainable subscription growth within a competitive market.",
   },

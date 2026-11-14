@@ -114,21 +114,21 @@ const gameLibraryModalData: CaseStudyModalData = {
   featureCards: [
     {
       heading: "Context",
-      body: "A retro-inspired game discovery experience built around exploration, mood, and easy browsing.",
+      body: "A retro-inspired game discovery site built around exploration, mood, and easy browsing.",
     },
     {
       heading: "Challenge",
-      body: "Balancing nostalgic visual energy with modern usability and accessibility across devices.",
+      body: "Balancing nostalgic visuals with modern usability and accessibility across devices.",
     },
     {
       heading: "Solution",
-      body: "A playful visual system with cleaner content hierarchy, semantic structure, and responsive layouts.",
+      body: "A playful visual system built on a clear hierarchy, consistent spacing, semantic structure, and responsive layouts.",
     },
   ],
   research: {
-    heading: "Understanding the user need",
+    heading: "What makes discovery feel good?",
     body:
-      "The concept was inspired by the discovery-heavy feel of early gaming portals: bold visual treatment, genre exploration, and a strong sense of personality. The main challenge was retaining that charm while making the experience clearer and easier to scan for modern users.",
+      "Early gaming portals were memorable because of their bold visuals, genre-driven exploration, and strong sense of personality. They were also dense, cluttered, and hard to scan. I reviewed that era’s browsing patterns alongside modern game storefronts to figure out which parts earned their charm and which ones got in the way. The takeaway was that users want the excitement of browsing without the noise.",
     image: gl("game-library-research-1.svg"),
     images: [
       gl("game-library-research-2.svg"),
@@ -136,22 +136,22 @@ const gameLibraryModalData: CaseStudyModalData = {
     ],
   },
   userFeedback: {
-    heading: "User feedback",
+    heading: "Users thoughts on early designs.",
     body:
-      "Early feedback reinforced that the visual direction felt memorable and fun, but users wanted clearer hierarchy, stronger callouts for key titles, and more consistent presentation across screen sizes.",
+      "I shared early designs with a small group of users to test the direction. Most found the visual style memorable and fun, but the same issues kept coming up: unclear hierarchy, weak emphasis on featured titles, and inconsistent presentation across screen sizes.",
   },
   objective: {
-    heading: "Create a playful discovery experience without sacrificing usability",
+    heading: "Create a playful discovery experience without sacrificing usability.",
     body:
-      "The goal was to design a game browsing experience that felt like a nostalgic portal while still feeling clear, efficient, and accessible.",
+      "The goal was to design a game browsing experience that felt like a nostalgic portal while still feeling clear, efficient, and accessible. Nostalgia would shape the look, while structure would guide how people use it.",
     painPointCards: [
       {
-        title: "Nostalgia overload",
-        quote: "The vibe was exciting, but the content hierarchy could feel crowded.",
+        title: "Visual overload",
+        quote: "The retro styling energized the page, but dense layouts buried the content.",
       },
       {
-        title: "Modern accessibility",
-        quote: "The interface needed stronger contrast and more consistent spacing and rhythm.",
+        title: "Accessibility gaps",
+        quote: "Contrast, spacing, and rhythm needed to be more consistent so text stayed readable against the retro color palette.",
       },
       {
         title: "Discovery friction",
@@ -165,53 +165,53 @@ const gameLibraryModalData: CaseStudyModalData = {
     image: gl("game-library-summary-2.svg"),
   },
     process: {
-    heading: "Refining the experience through iteration",
+    heading: "Refining the experience through iteration.",
     body:
-      "I moved from mood boards and style tiles into a more structured component system, then sharpened the layout through responsive breakpoints and visual accessibility checks.",
+      "I started with mood boarding and style tiles to lock in the visual language, then moved into a reusable component library. From there I refined layouts across responsive breakpoints and checked them against accessibility standards.",
     postBodyImages: [gl("game-library-process-1.svg")],
     featureCards: [
-      { title: "Mood boarding", description: "Explored retro gaming aesthetics and nostalgic UI references." },
-      { title: "Style tiles", description: "Defined the palette, typography, and visual system." },
-      { title: "Component library", description: "Built reusable interactive patterns for browsing and discovery." },
-      { title: "Responsive testing", description: "Adjusted for readability, touch comfort, and layout consistency." },
+      { title: "Mood boarding", description: "Collected retro gaming and early web UI references to define the tone." },
+      { title: "Style tiles", description: "Established the color palette, typography, and overall visual system." },
+      { title: "Component library", description: "Built reusable patterns for browsing, filtering, and featured content." },
+      { title: "Responsive testing", description: "Adjusted breakpoints for readability, touch targets, and layout consistency." },
     ],
     image: gl("game-library-process-2.svg"),
   },
   finalDesigns: {
-    heading: "A polished retro-modern game discovery experience",
+    heading: "Bold color, structured browsing, and a clear hierarchy.",
     body:
-      "The final direction blends bold color, playful layout rhythm, and a structured browsing experience that still feels approachable and easy to use.",
+      "The final direction keeps the retro personality in color, type, and layout rhythm, while a consistent grid and component system keep browsing clear.",
     image1: gl("game-library-final-design.svg"),
     additionalImages: [gl("game-library-summary-3.svg")],
   },
     reflections: {
-    heading: "Reflections",
-    body: "Nostalgic design works best as a visual layer on top of a clear structure. The strongest decisions were the ones where the style supported navigation instead of competing with it.",
+    heading: "This project taught me that nostalgia works best as a layer on top of structure.",
+    body: "The strongest decisions were the ones where the style helped people find games instead of competing with the content.",
     cards: [
       {
         title: "Structure first",
-        description: "The retro styling worked best when it sat on top of a clear hierarchy and consistent spacing.",
+        description: "The retro styling only worked once hierarchy and spacing were solid.",
       },
       {
         title: "Style that supports navigation",
-        description: "The strongest decisions helped users find games, instead of competing with the content.",
+        description: "Every visual choice had to help users find a game faster.",
       },
       {
         title: "Usability testing",
-        description: "With more time, I would test finding a game by genre and measure task success and time on task.",
+        description: "With more time, I’d run task-based tests on finding a game by genre, measuring task success and time on task.",
       },
       {
         title: "Accessibility follow-up",
-        description: "I would re-check color contrast and spacing against WCAG before calling the design finished.",
+        description: "I’d run contrast checks across the full palette and test the layouts with users on real phones and tablets before calling the design final.",
       },
     ],
   },
   projectedImpact: {
-    heading: "Projected impact",
+    heading: "Here’s how it’s projected to impact the experience.",
     bodyParagraph1:
-      "The concept aims to create a more engaging discovery flow for retro and indie game audiences, helping users find titles quickly while preserving the playful personality of the brand.",
+      "Game Library has not been released as a live product, and I haven’t run formal testing yet, so its impact is based on early user feedback and design principles rather than measured results. The design aims to help retro and indie game audiences find titles faster while keeping the playful personality that makes browsing enjoyable.",
     bodyParagraph2:
-      "By combining early web charm with modern UI clarity, the experience is designed to feel memorable, useful, and approachable across different device sizes.",
+      "By pairing early web charm with modern UI clarity, the experience is built to feel memorable, useful, and approachable across device sizes. The next step is usability testing to validate the browsing flow and accessibility improvements.",
   },
 };
 
