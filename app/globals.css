@@ -447,24 +447,10 @@ body:has(.about-page-content) #top > footer {
 }
 
 .section-nav-link {
-  position: relative;
   line-height: 1.4;
   padding: 0;
   margin: 0;
   cursor: pointer;
-}
-
-.section-nav-link::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #FF8851;
-  content: "";
-  opacity: 0;
-  pointer-events: none;
 }
 
 .section-nav-link:focus-visible {
@@ -475,27 +461,12 @@ body:has(.about-page-content) #top > footer {
 
 .section-nav-link:hover,
 .section-nav-link:focus-visible {
-  color: #302F2B;
+  color: var(--accent-orange);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .section-nav-link {
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-
-  .section-nav-link::before {
-    transform: translate(-6px, -50%);
-    transition: opacity 0.2s ease;
-  }
-
-  .section-nav-link:hover,
-  .section-nav-link:focus-visible {
-    transform: translateX(6px);
-  }
-
-  .section-nav-link:hover::before,
-  .section-nav-link:focus-visible::before {
-    opacity: 1;
+    transition: color 0.2s ease;
   }
 }
 
