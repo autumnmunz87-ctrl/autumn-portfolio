@@ -150,13 +150,7 @@ body:has(.about-page-content) .home-tabs-content {
 }
 
 body:has(.about-page-content) #top > footer {
-  margin-top: 96px;
-}
-
-@media (max-width: 767px) {
-  body:has(.about-page-content) #top > footer {
-    margin-top: 64px;
-  }
+  margin-top: 0;
 }
 
 /* Hero section - spacing below navbar */

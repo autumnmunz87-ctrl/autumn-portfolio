@@ -6,6 +6,28 @@ import Link from "next/link";
 import { getCaseStudyModalData, SECTION_NAV } from "@/lib/case-study-modal";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/case-studies";
 
+const imageAspectRatios: Record<string, string> = {
+  "game-library-final-design.svg": "2634 / 1753",
+  "game-library-process-1.svg": "2634 / 1753",
+  "game-library-process-2.svg": "2634 / 1753",
+  "game-library-research-1.svg": "2634 / 1753",
+  "game-library-research-2.svg": "2634 / 1753",
+  "game-library-research-3.png": "2634 / 1753",
+  "game-library-summary-2.svg": "2634 / 1753",
+  "game-library-summary-3.svg": "2634 / 1753",
+  "mind scribe final design.svg": "2634 / 1753",
+  "mind scribe reflections 1.svg": "2634 / 1753",
+  "mind scribe user feedback.svg": "2634 / 1802",
+  "mind-scribe-objective-1.svg": "2634 / 1940",
+  "mind-scribe-objective-2.svg": "2634 / 1753",
+  "mind-scribe-survey-features.svg": "2634 / 1802",
+};
+
+function getImageAspectRatio(src: string) {
+  const filename = decodeURIComponent(src.slice(src.lastIndexOf("/") + 1));
+  return imageAspectRatios[filename] ?? "728 / 496";
+}
+
 function scrollToSection(sectionId: string) {
   const el = document.getElementById(sectionId);
   if (el) {
@@ -17,13 +39,13 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div
       className="relative w-full overflow-hidden rounded-2xl mt-12 mb-12"
-      style={{ aspectRatio: "728/496" }}
+      style={{ aspectRatio: getImageAspectRatio(src) }}
     >
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className="!h-full !max-h-none !object-cover"
         sizes="(max-width: 1200px) 90vw, 728px"
       />
     </div>
@@ -34,13 +56,13 @@ function SectionImageCard({ src, alt }: { src: string; alt: string }) {
   return (
     <div
       className="relative w-full overflow-hidden rounded-2xl"
-      style={{ aspectRatio: "728/496" }}
+      style={{ aspectRatio: getImageAspectRatio(src) }}
     >
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className="!h-full !max-h-none !object-cover"
         sizes="(max-width: 808px) 90vw, 50vw"
       />
     </div>

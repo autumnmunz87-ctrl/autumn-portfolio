@@ -72,10 +72,10 @@ export const mindScribeModalData: MindScribeModalData = {
       "Journaling and wellness platform designed to inspire daily reflection and emotional well-being. This case study explores the design process from research to high-fidelity prototypes.",
   },
   metaGrid: {
-    role: "UX Designer",
-    skills: "Figma, Miro",
+    role: "UX/UI Designer",
+    skills: "Figma, Adobe CC",
     team: "Solo",
-    timeline: "3 weeks",
+    timeline: "December 2024 - April 2025",
   },
   featureCards: [
     {

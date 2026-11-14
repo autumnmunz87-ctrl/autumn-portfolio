@@ -100,7 +100,7 @@ export default function AboutTabContent() {
             </div>
           </aside>
 
-          <div className="min-w-0 lg:col-span-10">
+          <div className="min-w-0 pb-[112px] lg:col-span-10 min-[769px]:pb-[160px]">
             <section id="hi" className="scroll-mt-28">
               <div className="about-intro-grid grid min-w-0 gap-8 lg:grid-cols-2 lg:items-center">
                 <div className="about-portrait relative w-full max-w-[280px] justify-self-start overflow-hidden rounded-[24px] bg-primary-black/10 min-[393px]:max-w-[400px] min-[809px]:max-w-[544px]" style={{ aspectRatio: "544/560" }}>

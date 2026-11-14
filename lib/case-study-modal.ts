@@ -106,10 +106,10 @@ const gameLibraryModalData: CaseStudyModalData = {
       "Game Library is a retro-inspired gaming discovery site that blends early 2000s personality with clearer navigation, stronger hierarchy, and a more responsive browsing experience.",
   },
   metaGrid: {
-    role: "UX Designer",
+    role: "UX/UI Designer",
     skills: "Figma, Adobe CC",
     team: "Solo",
-    timeline: "September 2024 - November 2024",
+    timeline: "August 2025 - October 2025",
   },
   featureCards: [
     {
@@ -132,7 +132,7 @@ const gameLibraryModalData: CaseStudyModalData = {
     image: gl("game-library-research-1.svg"),
     images: [
       gl("game-library-research-2.svg"),
-      gl("game-library-research-3.svg"),
+      gl("game-library-research-3.png"),
     ],
   },
   userFeedback: {
@@ -175,7 +175,7 @@ const gameLibraryModalData: CaseStudyModalData = {
       { title: "Component library", description: "Built reusable interactive patterns for browsing and discovery." },
       { title: "Responsive testing", description: "Adjusted for readability, touch comfort, and layout consistency." },
     ],
-    image: gl("game-library-process-2.png"),
+    image: gl("game-library-process-2.svg"),
   },
   finalDesigns: {
     heading: "A polished retro-modern game discovery experience",

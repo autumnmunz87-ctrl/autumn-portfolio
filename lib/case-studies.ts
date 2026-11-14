@@ -54,12 +54,12 @@ export const caseStudies: CaseStudy[] = [
       "Journaling and wellness app concept built from a 12-person survey, competitor review, and published research.",
     intro:
       "A journaling and wellness app concept designed for people who want to reflect but have not stuck with an app. This case study covers the research, the design process, and what the data suggests about the market.",
-    image: "/images%20mind%20scribe/mind%20scribe%20hero.png.png",
+    image: "/images%20mind%20scribe/mind%20scribe%20hero.svg",
     href: "/work/mind-scribe",
     tags: ["UI/UX", "Prototyping", "Research"],
     role: "UX Designer & Researcher",
     team: "Solo",
-    duration: "February 2024 - May 2024",
+    duration: "December 2024 - April 2025",
     tools: "Figma, Google Forms",
     insights: [
       { heading: "Context", body: "11 of 12 survey respondents journal on paper, and only 1 currently uses a journaling app." },
@@ -103,7 +103,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ["UI/UX", "Speculative", "Visual Design"],
     role: "UX Designer",
     team: "Solo",
-    duration: "September 2024 - November 2024",
+    duration: "August 2025 - October 2025",
     tools: "Figma, Adobe CC",
     insights: [
       { heading: "Context", body: "A discovery site for retro and indie games with early 2000s web aesthetics." },
@@ -111,13 +111,13 @@ export const caseStudies: CaseStudy[] = [
       { heading: "Solution", body: "Period-appropriate typography and color palettes with contemporary layout patterns." },
     ],
     dataBlock: {
-      uiImage: "game-library-research-1.svg",
+      uiImage: GameLibraryImageFile("game-library-research-1.svg"),
       chartImage: "/placeholder-gamelibrary.svg",
     },
         contextImage: GameLibraryImageFile("game-library-research-1.svg"),
     contextImages: [
       GameLibraryImageFile("game-library-research-2.svg"),
-      GameLibraryImageFile("game-library-research-3.svg"),
+      GameLibraryImageFile("game-library-research-3.png"),
     ],
     processImages: [
       GameLibraryImageFile("game-library-process-1.svg"),
