@@ -64,7 +64,7 @@ function mindScribeImageFile(filename: string): string {
 }
 
 export const mindScribeModalData: MindScribeModalData = {
-  coverImage: mindScribeImageFile("mind scribe hero.png.png"),
+  coverImage: mindScribeImageFile("mind scribe hero.svg"),
   summary: {
     heading:
       "Designing new features to integrate innovation and improve user engagement and accessibility.",
@@ -95,14 +95,14 @@ export const mindScribeModalData: MindScribeModalData = {
     heading: "How can I add value?",
     body:
       "I identified common pain points that were echoed across competitor apps. Users frequently voiced frustrations with unattractive, unresponsive user interfaces, lack of customization, and intrusive ads. Additionally, many apps required expensive subscriptions for features that should have been included by default. A key takeaway was the demand for a balance between a visually appealing interface and user-friendly features.",
-      image: mindScribeImageFile("mind scribe user feedback.png.png"),
+      image: mindScribeImageFile("mind scribe user feedback.svg"),
   },
   userFeedback: {
     heading:
       "I surveyed a concentrated group of users to better understand their journaling habits and preferences.",
     body:
       "While the majority of respondents preferred traditional pen-and-paper journaling, many expressed interest in an app that could provide them with thoughtful prompts, track their wellness journey, and store their entries securely. The most frequent complaints included a lack of dark mode, aesthetically unpleasing interfaces, excessive ads, and the risk of losing important data. Users also indicated dissatisfaction with subscription pricing models that did not justify the lack of compelling features.",
-      image: mindScribeImageFile("mind-scribe-survey-features.png"),
+      image: mindScribeImageFile("mind-scribe-survey-features.svg"),
   },
   objective: {
     heading: "This created an opportunity for me to create a captivating and intuitive app.",
@@ -114,7 +114,7 @@ export const mindScribeModalData: MindScribeModalData = {
       { title: "Monetization issues", quote: "Intrusive ads, expensive subscriptions for basic features" },
       { title: "Data security concerns", quote: "Risk of losing important journal entries" },
     ],
-    image: mindScribeImageFile("mind-scribe-objective-1.png"),
+    image: mindScribeImageFile("mind-scribe-objective-1.svg"),
   },
   ideationProcess: {
     heading:
@@ -127,15 +127,15 @@ export const mindScribeModalData: MindScribeModalData = {
       { title: "Wireframes", description: "Low and high-fidelity prototypes" },
       { title: "Testing", description: "Usability testing and iteration" },
     ],
-    ideationImage: mindScribeImageFile("mind-scribe-objective-2.png"),
-    designProcessImage: mindScribeImageFile("mind-scribe-objective-1.png"),
+    ideationImage: mindScribeImageFile("mind-scribe-objective-2.svg"),
+    designProcessImage: mindScribeImageFile("mind-scribe-objective-1.svg"),
   },
   finalDesigns: {
     heading:
       "Seamless interface, clear navigation, customizable themes, and thoughtful journaling prompts.",
     body:
       "When I presented the final design to users, they expressed genuine enthusiasm and indicated they would be willing to pay for a subscription for this app, with majority of users expressing their preference of Mind Scribe over competitor apps. Many participants encouraged me to develop the app into a fully functioning product rather than leaving it as a design concept. This positive response confirmed that the app effectively addressed users' needs and created a meaningful and successful design that resonates with users.",
-    image1: mindScribeImageFile("mind scribe final design.png.png"),
+    image1: mindScribeImageFile("mind scribe final design.svg"),
   },
   reflections: {
     heading: "This experience strengthened my design and leadership abilities.",

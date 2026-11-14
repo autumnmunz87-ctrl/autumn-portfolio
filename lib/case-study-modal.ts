@@ -98,7 +98,7 @@ function mapMindScribeModalData(data: MindScribeModalData): CaseStudyModalData {
 const gl = (file: string) =>
   "/" + ["images game library", file].map(encodeURIComponent).join("/");
 const gameLibraryModalData: CaseStudyModalData = {
-  coverImage: gl("game-library-hero.png"),
+  coverImage: gl("game-library-hero.svg"),
   coverAlt: "Game Library project cover",
   summary: {
     heading: "Designing a nostalgic discovery flow that still feels modern and usable.",
@@ -129,10 +129,10 @@ const gameLibraryModalData: CaseStudyModalData = {
     heading: "Understanding the user need",
     body:
       "The concept was inspired by the discovery-heavy feel of early gaming portals: bold visual treatment, genre exploration, and a strong sense of personality. The main challenge was retaining that charm while making the experience clearer and easier to scan for modern users.",
-    image: gl("game-library-research-1.png"),
+    image: gl("game-library-research-1.svg"),
     images: [
-      gl("game-library-research-2.png"),
-      gl("game-library-research-3.png"),
+      gl("game-library-research-2.svg"),
+      gl("game-library-research-3.svg"),
     ],
   },
   userFeedback: {
@@ -162,13 +162,13 @@ const gameLibraryModalData: CaseStudyModalData = {
         quote: "The layout needed to stay readable and comfortable across desktop and mobile screens.",
       },
     ],
-    image: gl("game-library-summary-2.png"),
+    image: gl("game-library-summary-2.svg"),
   },
     process: {
     heading: "Refining the experience through iteration",
     body:
       "I moved from mood boards and style tiles into a more structured component system, then sharpened the layout through responsive breakpoints and visual accessibility checks.",
-    postBodyImages: [gl("game-library-process-1.png")],
+    postBodyImages: [gl("game-library-process-1.svg")],
     featureCards: [
       { title: "Mood boarding", description: "Explored retro gaming aesthetics and nostalgic UI references." },
       { title: "Style tiles", description: "Defined the palette, typography, and visual system." },
@@ -181,8 +181,8 @@ const gameLibraryModalData: CaseStudyModalData = {
     heading: "A polished retro-modern game discovery experience",
     body:
       "The final direction blends bold color, playful layout rhythm, and a structured browsing experience that still feels approachable and easy to use.",
-    image1: gl("game-library-final-design.png"),
-    additionalImages: [gl("game-library-summary-3.png")],
+    image1: gl("game-library-final-design.svg"),
+    additionalImages: [gl("game-library-summary-3.svg")],
   },
     reflections: {
     heading: "Reflections",

@@ -98,7 +98,7 @@ export const caseStudies: CaseStudy[] = [
       "Gaming website that balances early 2000s nostalgia with modern usability.",
     intro:
       "A discovery site for retro and indie games, evoking early 2000s web aesthetics while maintaining modern accessibility and responsiveness.",
-    image: GameLibraryImageFile("game-library-hero.png"),
+    image: GameLibraryImageFile("game-library-hero.svg"),
     href: "/work/game-library",
     tags: ["UI/UX", "Speculative", "Visual Design"],
     role: "UX Designer",
@@ -111,21 +111,21 @@ export const caseStudies: CaseStudy[] = [
       { heading: "Solution", body: "Period-appropriate typography and color palettes with contemporary layout patterns." },
     ],
     dataBlock: {
-      uiImage: "game-library-research-1.png",
+      uiImage: "game-library-research-1.svg",
       chartImage: "/placeholder-gamelibrary.svg",
     },
-        contextImage: GameLibraryImageFile("game-library-research-1.png"),
+        contextImage: GameLibraryImageFile("game-library-research-1.svg"),
     contextImages: [
-      GameLibraryImageFile("game-library-research-2.png"),
-      GameLibraryImageFile("game-library-research-3.png"),
+      GameLibraryImageFile("game-library-research-2.svg"),
+      GameLibraryImageFile("game-library-research-3.svg"),
     ],
     processImages: [
-      GameLibraryImageFile("game-library-process-1.png"),
-      GameLibraryImageFile("game-library-process-2.png"),
+      GameLibraryImageFile("game-library-process-1.svg"),
+      GameLibraryImageFile("game-library-process-2.svg"),
     ],
     designArtifacts: [],
-    solutionImage: GameLibraryImageFile("game-library-final-design.png"),
-    impactImage: GameLibraryImageFile("game-library-summary-3.png"),
+    solutionImage: GameLibraryImageFile("game-library-final-design.svg"),
+    impactImage: GameLibraryImageFile("game-library-summary-3.svg"),
     context:
       "Game Library is a discovery site for retro and indie games, aiming to evoke early 2000s web aesthetics while staying usable.",
     challenge:
@@ -143,7 +143,7 @@ export const caseStudies: CaseStudy[] = [
     // TODO: Replace with final FinNeo case study description when details are ready.
     description:
       "A fintech product that reimagines personal finance through intuitive design.",
-    image: "/images%20finneo/FinNeo-hero-image.png",
+    image: "/images%20finneo/FinNeo-hero-image.svg",
     href: "/work/finneo",
     // TODO: Set to false and complete case study fields when FinNeo case study is complete.
     comingSoon: true,
