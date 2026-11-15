@@ -98,7 +98,7 @@ function mapMindScribeModalData(data: MindScribeModalData): CaseStudyModalData {
 const gl = (file: string) =>
   "/" + ["images game library", file].map(encodeURIComponent).join("/");
 const gameLibraryModalData: CaseStudyModalData = {
-  coverImage: gl("game-library-hero.svg"),
+  coverImage: gl("game-library-hero.png"),
   coverAlt: "Game Library project cover",
   summary: {
     heading: "Designing a nostalgic discovery flow that still feels modern and usable.",
@@ -129,9 +129,9 @@ const gameLibraryModalData: CaseStudyModalData = {
     heading: "What makes discovery feel good?",
     body:
       "Early gaming portals were memorable because of their bold visuals, genre-driven exploration, and strong sense of personality. They were also dense, cluttered, and hard to scan. I reviewed that era’s browsing patterns alongside modern game storefronts to figure out which parts earned their charm and which ones got in the way. The takeaway was that users want the excitement of browsing without the noise.",
-    image: gl("game-library-research-1.svg"),
+    image: gl("game-library-research-1.png"),
     images: [
-      gl("game-library-research-2.svg"),
+      gl("game-library-research-2.png"),
       gl("game-library-research-3.png"),
     ],
   },
@@ -162,27 +162,27 @@ const gameLibraryModalData: CaseStudyModalData = {
         quote: "The layout needed to stay readable and comfortable across desktop and mobile screens.",
       },
     ],
-    image: gl("game-library-summary-2.svg"),
+    image: gl("game-library-summary-2.png"),
   },
     process: {
     heading: "Refining the experience through iteration.",
     body:
       "I started with mood boarding and style tiles to lock in the visual language, then moved into a reusable component library. From there I refined layouts across responsive breakpoints and checked them against accessibility standards.",
-    postBodyImages: [gl("game-library-process-1.svg")],
+    postBodyImages: [gl("game-library-process-1.png")],
     featureCards: [
       { title: "Mood boarding", description: "Collected retro gaming and early web UI references to define the tone." },
       { title: "Style tiles", description: "Established the color palette, typography, and overall visual system." },
       { title: "Component library", description: "Built reusable patterns for browsing, filtering, and featured content." },
       { title: "Responsive testing", description: "Adjusted breakpoints for readability, touch targets, and layout consistency." },
     ],
-    image: gl("game-library-process-2.svg"),
+    image: gl("game-library-process-2.png"),
   },
   finalDesigns: {
     heading: "Bold color, structured browsing, and a clear hierarchy.",
     body:
       "The final direction keeps the retro personality in color, type, and layout rhythm, while a consistent grid and component system keep browsing clear.",
-    image1: gl("game-library-final-design.svg"),
-    additionalImages: [gl("game-library-summary-3.svg")],
+    image1: gl("game-library-final-design.png"),
+    additionalImages: [gl("game-library-summary-3.png")],
   },
     reflections: {
     heading: "This project taught me that nostalgia works best as a layer on top of structure.",

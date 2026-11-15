@@ -54,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
       "Journaling and wellness app concept built from a 12-person survey, competitor review, and published research.",
     intro:
       "A journaling and wellness app concept designed for people who want to reflect but have not stuck with an app. This case study covers the research, the design process, and what the data suggests about the market.",
-    image: "/images%20mind%20scribe/mind%20scribe%20hero.svg",
+    image: "/images%20mind%20scribe/mind%20scribe%20hero.png",
     href: "/work/mind-scribe",
     tags: ["UI/UX", "Prototyping", "Research"],
     role: "UX Designer & Researcher",
@@ -67,12 +67,12 @@ export const caseStudies: CaseStudy[] = [
       { heading: "Solution", body: "A customizable, uncluttered app with themes and guided prompts that make starting an entry easy." },
     ],
     dataBlock: {
-      uiImage: "/placeholder-mindscribe.svg",
-      chartImage: "/placeholder-mindscribe.svg",
+      uiImage: "/placeholder-mindscribe.png",
+      chartImage: "/placeholder-mindscribe.png",
     },
     designArtifacts: [
-      "/placeholder-mindscribe.svg",
-      "/placeholder-mindscribe.svg",
+      "/placeholder-mindscribe.png",
+      "/placeholder-mindscribe.png",
     ],
     context:
       "Mind Scribe is a journaling and wellness app concept. A 12-person survey found that 11 of 12 respondents use pen and paper and only 1 uses a journaling app.",
@@ -98,7 +98,7 @@ export const caseStudies: CaseStudy[] = [
       "Gaming website that balances early 2000s nostalgia with modern usability.",
     intro:
       "A discovery site for retro and indie games, evoking early 2000s web aesthetics while maintaining modern accessibility and responsiveness.",
-    image: GameLibraryImageFile("game-library-hero.svg"),
+    image: GameLibraryImageFile("game-library-hero.png"),
     href: "/work/game-library",
     tags: ["UI/UX", "Speculative", "Visual Design"],
     role: "UX Designer",
@@ -111,21 +111,21 @@ export const caseStudies: CaseStudy[] = [
       { heading: "Solution", body: "Period-appropriate typography and color palettes with contemporary layout patterns." },
     ],
     dataBlock: {
-      uiImage: GameLibraryImageFile("game-library-research-1.svg"),
-      chartImage: "/placeholder-gamelibrary.svg",
+      uiImage: GameLibraryImageFile("game-library-research-1.png"),
+      chartImage: "/placeholder-gamelibrary.png",
     },
-        contextImage: GameLibraryImageFile("game-library-research-1.svg"),
+        contextImage: GameLibraryImageFile("game-library-research-1.png"),
     contextImages: [
-      GameLibraryImageFile("game-library-research-2.svg"),
+      GameLibraryImageFile("game-library-research-2.png"),
       GameLibraryImageFile("game-library-research-3.png"),
     ],
     processImages: [
-      GameLibraryImageFile("game-library-process-1.svg"),
-      GameLibraryImageFile("game-library-process-2.svg"),
+      GameLibraryImageFile("game-library-process-1.png"),
+      GameLibraryImageFile("game-library-process-2.png"),
     ],
     designArtifacts: [],
-    solutionImage: GameLibraryImageFile("game-library-final-design.svg"),
-    impactImage: GameLibraryImageFile("game-library-summary-3.svg"),
+    solutionImage: GameLibraryImageFile("game-library-final-design.png"),
+    impactImage: GameLibraryImageFile("game-library-summary-3.png"),
     context:
       "Game Library is a discovery site for retro and indie games, aiming to evoke early 2000s web aesthetics while staying usable.",
     challenge:
@@ -143,7 +143,7 @@ export const caseStudies: CaseStudy[] = [
     // TODO: Replace with final FinNeo case study description when details are ready.
     description:
       "A fintech product that reimagines personal finance through intuitive design.",
-    image: "/images%20finneo/FinNeo-hero-image.svg",
+    image: "/images%20finneo/FinNeo-hero-image.png",
     href: "/work/finneo",
     // TODO: Set to false and complete case study fields when FinNeo case study is complete.
     comingSoon: true,
